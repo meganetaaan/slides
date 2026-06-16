@@ -1,5 +1,5 @@
-name: publish-marp
-concurrency: publish-marp
+name: publish-slides
+concurrency: publish-slides
 
 on:
   push:
@@ -18,17 +18,16 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Make build directory
-        run: mkdir -p build
-      - name: Copy assets
-        run: if [[ -d assets ]]; then cp -R assets build/assets; fi
-      - name: Build HTML
-        uses: docker://marpteam/marp-cli:v3.0.2
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          args: --title="ｽﾀｯｸﾁｬﾝ TypeScriptでつくるオープンソースロボット" --description=\"tskaigi2024 発表資料\" --url=\"https://meganetaaan.github.io/slides-tskaigi2024/\" --author "ししかわ" --og-image https://meganetaaan.github.io/slides-tskaigi2024/assets/images/in_your_hands.jpg --bespoke.progress true --html slides.md -o build/index.html
-        env:
-          MARP_USER: root:root
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build slides
+        run: npm run build
       - name: Deploy preview
         if: ${{ github.event_name == 'pull_request' }}
         uses: rossjrw/pr-preview-action@v1

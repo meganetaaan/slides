@@ -1,18 +1,26 @@
 {
-  "name": "slides-tskaigi2024",
+  "name": "slides",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:html": "mkdir -p build/assets && cp -R assets build/ && marp build --title=\"ｽﾀｯｸﾁｬﾝ TypeScriptでつくるオープンソースロボット\" --description=\"tskaigi2024 発表資料\" --url=\"https://meganetaaan.github.io/slides-tskaigi2024/\" --author=ししかわ --og-image=\"https://meganetaaan.github.io/slides-tskaigi2024/assets/images/in_your_hands.jpg\" --bespoke.progress=\"true\" --html ./slides.md -o build/index.html",
+    "build": "npm run build:tskaigi-2024 && npm run build:devsumi-2026 && npm run build:birthday-2026 && npm run build:index",
+    "build:html": "npm run build:tskaigi-2024",
+    "build:index": "node scripts/build-index.mjs",
+    "build:tskaigi-2024": "mkdir -p build/tskaigi-2024 && cp -R slides/tskaigi-2024/assets build/tskaigi-2024/ && marp --title=\"ｽﾀｯｸﾁｬﾝ TypeScriptでつくるオープンソースロボット\" --description=\"TSKaigi 2024 発表資料\" --url=\"https://meganetaaan.github.io/slides/tskaigi-2024/\" --author=ししかわ --og-image=\"https://meganetaaan.github.io/slides/tskaigi-2024/assets/images/in_your_hands.jpg\" --bespoke.progress=\"true\" --html slides/tskaigi-2024/slides.md -o build/tskaigi-2024/index.html",
+    "build:devsumi-2026": "vite build slides/devsumi-2026 --base=/slides/devsumi-2026/ --outDir=../../build/devsumi-2026 --emptyOutDir && mkdir -p build/devsumi-2026/assets && cp -R slides/devsumi-2026/assets/. build/devsumi-2026/assets/",
+    "dev:devsumi-2026": "vite slides/devsumi-2026",
     "serve": "http-server build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:birthday-2026": "mkdir -p build/birthday-2026 && cp -R slides/birthday-2026/assets build/birthday-2026/ && marp --title=\"ｽﾀｯｸﾁｬﾝの今までとこれから\" --description=\"ｽﾀｯｸﾁｬﾝお誕生日会2026 発表資料\" --url=\"https://meganetaaan.github.io/slides/birthday-2026/\" --author=ししかわ --og-image=\"https://meganetaaan.github.io/slides/birthday-2026/assets/images/stack_chan_desk.jpg\" --bespoke.progress=\"true\" --html slides/birthday-2026/slides.md -o build/birthday-2026/index.html"
   },
   "keywords": [],
   "author": "Shinya Ishikawa <ishikawa.s.1027@gmail.com> (https://meganetaaan.github.io/)",
   "license": "ISC",
   "devDependencies": {
     "@marp-team/marp-cli": "^3.4.0",
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "vite": "^6.0.0"
   }
 }

@@ -1,0 +1,75 @@
+name: Deploy Slides to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Compute Vite base path
+        id: base-path
+        shell: bash
+        run: |
+          owner="${GITHUB_REPOSITORY%%/*}"
+          repo="${GITHUB_REPOSITORY##*/}"
+
+          if [[ "${repo}" == "${owner}.github.io" ]]; then
+            base_path="/"
+          else
+            base_path="/${repo}/"
+          fi
+
+          echo "value=${base_path}" >> "${GITHUB_OUTPUT}"
+          echo "Using Vite base path: ${base_path}"
+
+      - name: Build slides
+        run: npm run build -- --base "${{ steps.base-path.outputs.value }}"
+
+      - name: Copy static assets for markdown template slides
+        run: |
+          mkdir -p dist/assets
+          cp -a assets/. dist/assets/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
