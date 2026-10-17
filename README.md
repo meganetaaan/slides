@@ -21,3 +21,14 @@ Pull Request作成やmainブランチの更新時、gh-pagesにスライドが�
 ## License
 
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
+
+## RTE 2026
+
+[Growing Together: Stack-chan and Its Open-Source Community](./slides/irte-2026/README.md) の編集可能ソースと台本は `slides/irte-2026/` にあります。minitype 0.1.7 を使用します。素材の公開条件と必要なローカル画像を同ディレクトリの README で確認してください。
+
+```console
+npm ci --prefix slides/irte-2026
+npm run build:irte-2026
+```
+
+生成した PDF は `slides/irte-2026/output/` に出力されます。素材の再配布許諾が未確認のため PDF は Git に含めていません。

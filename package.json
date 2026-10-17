@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:irte-2026": "npm --prefix slides/irte-2026 run build",
     "build:html": "mkdir -p build/assets && cp -R assets build/ && marp build --title=\"ｽﾀｯｸﾁｬﾝ TypeScriptでつくるオープンソースロボット\" --description=\"tskaigi2024 発表資料\" --url=\"https://meganetaaan.github.io/slides-tskaigi2024/\" --author=ししかわ --og-image=\"https://meganetaaan.github.io/slides-tskaigi2024/assets/images/in_your_hands.jpg\" --bespoke.progress=\"true\" --html ./slides.md -o build/index.html",
     "serve": "http-server build",
     "test": "echo \"Error: no test specified\" && exit 1"

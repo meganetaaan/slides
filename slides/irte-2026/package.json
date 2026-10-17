@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@minitype/minitype": "0.1.7",
+    "tsx": "4.20.6"
+  },
+  "name": "rte2026-growing-together-v2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node --import tsx build.ts"
+  }
+}
