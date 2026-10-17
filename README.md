@@ -31,4 +31,4 @@ npm ci --prefix slides/irte-2026
 npm run build:irte-2026
 ```
 
-生成した PDF は `slides/irte-2026/output/` に出力されます。素材の再配布許諾が未確認のため PDF は Git に含めていません。
+生成した PDF は `slides/irte-2026/output/` に出力されます。PDF は生成物として Git に含めていません。画像13点には出典・作者・取得元URLと判明している利用条件を記載しています。取得元の複製制限が確認された M5Stack 商品画像2点は除外し、詳細を同ディレクトリの `ASSET-RIGHTS.md` に記録しています。

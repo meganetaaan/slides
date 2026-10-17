@@ -2,16 +2,9 @@
 /build/
 /output/
 /fonts/SourceHanSerifJP-Regular.otf
-# Original images retained locally pending public redistribution permission.
-/assets/birthday-community-wide.jpg
-/assets/birthday-2022-robots-cake.jpg
-/assets/first-stackchan-2021.jpg
-/assets/m5stack-basic-device.jpg
-/assets/tomorrow56-sg90.jpg
-/assets/m5stackchan-commercial.jpg
-/assets/community-makerfaire-shenzhen.jpg
-/assets/takao-kit-robot.jpg
-/assets/stack-san-portrait.jpg
 /font-caches.db
 /font-caches.db-shm
 /font-caches.db-wal
+# Acquisition-site terms restrict copying without written permission.
+/assets/m5stack-basic-device.jpg
+/assets/m5stackchan-commercial.jpg

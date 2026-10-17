@@ -19,6 +19,6 @@ Edition: October 11, 2026, delivered at approximately 22:29 JST. All three suppl
 - Core source files, dependency lockfile, fonts, licenses and images are byte-identical to the source ZIP. The source archive README is preserved as `SOURCE-README.md`.
 - PDF bytes are not expected to match because the export embeds creation metadata. Visual and textual comparisons above verify the presentation itself.
 
-Validation used the locally preserved originals, including images omitted from public Git history. A clean clone needs the seven referenced omitted images before it can rebuild the original deck. Two other omitted images are unused archive alternatives. See `ASSET-RIGHTS.md`.
+Validation used the locally preserved originals. Thirteen archive images are tracked with credits; two M5Stack store images remain excluded due to the acquisition site’s explicit reproduction restriction. A clean clone needs authorized copies of those two files before it can rebuild the original deck. All thirteen included images match the original archive hashes. See `ASSET-RIGHTS.md`.
 
 The supplied dependency versions are retained for reproducibility. Installation reported two dependency audit findings (one moderate, one high); no dependency upgrades were made as part of importing the presentation.
