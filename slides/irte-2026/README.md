@@ -1,19 +1,19 @@
 # Growing Together · RTE 2026
 
-October 11, 2026, v5: 22 slides, 1,894 English spoken words plus a Chinese self-introduction. The editable source uses `@minitype/minitype` 0.1.7. The original slide text, layout, script, dependency lockfile and image credits are preserved.
+October 11, 2026, v5: 22 slides, 1,894 English spoken words plus a Chinese self-introduction. The editable source uses `@minitype/minitype` 0.1.7. The illustrated edition preserves the original slide text, speaker script, photographs, source links and dependency lockfile. Text-only pages can carry an optional illustration alongside the unchanged wording. Original image credit entries are retained, with AI-generated illustrations identified separately.
 
 ## Files
 
-- `slides.json`: slide content, speaker notes, source links and timing
-- `build.ts`: the original TypeScript layout and PDF exporter
+- `slides.json`: slide content, speaker notes, source links, timing and optional `illustration` / `illustrationCredit` fields
+- `build.ts`: TypeScript layouts and PDF exporter, including layouts for illustrated text pages
 - `Speaker-Script.txt`: the complete v5 rehearsal script
 - `assets/`, `fonts/`, `licenses/`: included materials and their notices
 - `image-credits.json`: original image provenance and reuse notes
 - `ASSET-RIGHTS.md`: per-image public-repository inclusion decisions
-- `asset-sha256.json`: hashes of all 15 original images
+- `asset-sha256.json`: hashes of the 15 original images and added illustrations
 - `SOURCE-README.md`: unchanged instructions supplied with the source archive
 
-## Rebuild the original presentation
+## Rebuild the illustrated presentation
 
 Use Node.js 20 or newer and npm. The validated environment uses Node.js 22.15.0 and npm 10.9.2. Initial dependency installation needs internet access and runs the native `better-sqlite3` install step; do not disable install scripts.
 
@@ -33,9 +33,13 @@ npm ci --prefix slides/irte-2026
 npm run build:irte-2026
 ```
 
-Open `output/RTE2026-Growing-Together-v5.pdf` in a PDF viewer. The build also writes `output/RTE2026-Growing-Together-v5-Speaker-Script.txt`, `build/layout.json` and `build/diagnostics.json`. These generated directories, the font cache database and the fallback font copied from minitype are ignored by Git.
+Open `output/RTE2026-Growing-Together-Illustrated.pdf` in a PDF viewer. The build also writes `output/RTE2026-Growing-Together-Illustrated-Speaker-Script.txt`, `build/layout.json` and `build/diagnostics.json`. These generated directories, the font cache database and the fallback font copied from minitype are ignored by Git.
 
 The PDF is static, 16:9, 960 × 540 points, with no runtime network requirement. Generated PDFs remain outside Git, matching the repository’s build-output convention. The current PDF also embeds the two excluded M5Stack store images. The original source archive and delivered PDF remain separate from this public-repository source tree.
+
+## Illustrations
+
+The current illustrated pages are 7 (paper-tube octopus), 12 (personal expression) and 20 (group conversation). Their original PNGs live under `assets/illustrations/`. Text layouts accept an optional `illustration` filename and a separate `illustrationCredit`, so the speaker script and existing photo credits remain intact. More illustrations can use the prepared word, statement, rule, goal and invitation layouts.
 
 ## Placement and rights
 

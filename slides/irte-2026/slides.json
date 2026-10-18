@@ -134,7 +134,9 @@
     "notes": "That first version was simple, and I wanted people to feel comfortable showing a simple creation too. There is a childhood memory behind that feeling. In kindergarten, I made an octopus from a paper tube. I was told it wasn't complicated enough. So I made two octopuses. That still wasn't enough. I sometimes remember this when I think about what makes something worth showing. With Stack-chan, I want people to be able to enjoy what they made and proudly call it a robot. It can be a beginning, even before they know what to add next.",
     "sources": [
       "Speaker's account, October 11, 2026"
-    ]
+    ],
+    "illustration": "illustrations/paper-tube-octopus.png",
+    "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)"
   },
   {
     "id": "continuity",
@@ -210,7 +212,9 @@
     "sources": [
       "Speaker's account, October 11, 2026"
     ],
-    "label": "A hypothesis about participation"
+    "label": "A hypothesis about participation",
+    "illustration": "illustrations/personal-expression.png",
+    "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)"
   },
   {
     "id": "takao",
@@ -334,7 +338,9 @@
     "notes": "These possibilities also change what I want to try. One idea is several Stack-chans talking together, with a person listening and joining when something interests them. Which robot speaks next? Where does it look? How does it notice that someone wants to join? Before LLM integration, I spent a lot of time on blinking, gaze, and small movements. A turn or a pause can shape an interaction even with two motors. That interest is still with me. This is a direction to explore, rather than a finished system I am showing today.",
     "sources": [
       "Speaker's account, October 2026"
-    ]
+    ],
+    "illustration": "illustrations/group-conversation.png",
+    "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)"
   },
   {
     "id": "goal",

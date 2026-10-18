@@ -1,4 +1,4 @@
-# v5 provenance and validation
+# Presentation provenance and validation
 
 Edition: October 11, 2026, delivered at approximately 22:29 JST. All three supplied Library records resolve to version 3, with matching v5 filenames and content. The later title search found no newer RTE2026 / Growing-Together presentation edition. The package name still contains `v2`; it is preserved from the original and is not the edition identifier.
 
@@ -8,7 +8,7 @@ Edition: October 11, 2026, delivered at approximately 22:29 JST. All three suppl
 | `RTE2026-Growing-Together-v5-Speaker-Script.txt` | `84306c512922ec4f7be769090d4ff09fc606afc7c7edc3cdf654ebb0346babcb` |
 | `RTE2026-Growing-Together-v5.pdf` | `e6d3adf8e0bb58b6dfc459205a2e3605eaf1f0aacf3e7c5c2d56cbf2da346dbe` |
 
-## Validation
+## Original v5 import validation
 
 - `npm ci` from the supplied lockfile, then `npm run build:irte-2026` from the repository root, using Node.js 22.15.0 and npm 10.9.2.
 - 22 pages, 960 × 540 points; 1,894 English spoken words plus the Chinese introduction; planned delivery time 19:20.
@@ -22,3 +22,7 @@ Edition: October 11, 2026, delivered at approximately 22:29 JST. All three suppl
 Validation used the locally preserved originals. Thirteen archive images are tracked with credits; two M5Stack store images remain excluded due to the acquisition site’s explicit reproduction restriction. A clean clone needs authorized copies of those two files before it can rebuild the original deck. All thirteen included images match the original archive hashes. See `ASSET-RIGHTS.md`.
 
 The supplied dependency versions are retained for reproducibility. Installation reported two dependency audit findings (one moderate, one high); no dependency upgrades were made as part of importing the presentation.
+
+## Illustrated edition
+
+The illustrated edition adds AI-generated artwork to text-only pages and adjusts those pages’ layouts. Original slide wording, timing, notes, source links, photos and the speaker script remain unchanged. Baseline v5 pixel-identity results above describe the original import, not the new illustrated pages. See the current edition’s validation results once all illustrations have been received and integrated.

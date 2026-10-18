@@ -1,6 +1,6 @@
 # Image sources and reuse conditions
 
-The original `image-credits.json` is preserved unchanged. The table below records the author/credit, source page, acquisition URL, transformations and known conditions for every original image. Attribution does not change a license or establish permission. Inclusion in this factual presentation does not offer a general reuse license.
+The 15 original entries in `image-credits.json` are retained unchanged; new AI-generated illustration entries follow them. The table below records the author/credit, source page, acquisition URL, transformations and known conditions for every original image. Attribution does not change a license or establish permission. Inclusion in this factual presentation does not offer a general reuse license.
 
 The repository-wide license does **not** automatically apply to third-party images, fonts, trademarks or other third-party materials. Unknown media permissions are recorded as unknown; they are not described as CC, MIT or Apache permissions merely because the image is publicly visible.
 
@@ -22,8 +22,18 @@ The repository-wide license does **not** automatically apply to third-party imag
 | `shishikawa-business-card.png`<br>Shinya Ishikawa / Stack-chan community | Source: User-provided image, October 11, 2026<br>Acquired from: User-provided image, October 11, 2026 | Included. Supplied by the speaker for inclusion in this presentation. No broader reuse permission implied.<br>Transformation: Original image preserved in full; proportionally scaled with no cropping or redrawing. |
 | `stackchan-birth-tweet-card.jpg`<br>Shinya Ishikawa / @meganetaaan | Source: https://x.com/meganetaaan/status/1410631124045291521<br>Acquired from: https://x.com/meganetaaan/status/1410631124045291521 | Included. The speaker explicitly requested inclusion of this own post in the presentation. No unrelated reuse permission implied.<br>Transformation: Authentic browser region capture of the post card; no reconstructed text or generated image. Proportionally scaled. Video shown as a static frame. |
 
-All image bytes are preserved from the v5 source archive and can be checked against `asset-sha256.json`. The two excluded files remain ignored locally. The original `build.ts`, slide text and layouts are unchanged. No placeholder is silently substituted into the original presentation.
+The original photographic image bytes are preserved from the v5 source archive. Original images and added illustrations can be checked against `asset-sha256.json`. The two excluded files remain ignored locally. The original slide text, speaker script and photograph references are unchanged. Illustrated text pages have an additional image-and-text layout. No placeholder is silently substituted into the original presentation.
 
 A clean clone contains 13 of the 15 archive images. The only unresolved slide image references are the two M5Stack store images listed above. `output/` PDFs are generated artifacts and are not tracked; the current PDF also embeds those two excluded images.
 
 Font and engine notices are retained under `licenses/`. The original archive README is retained as `SOURCE-README.md`.
+
+## Added illustrations
+
+These images use a hand-drawn visual style but are **AI-generated with OpenAI ImageGen**, not historical photographs or human-drawn originals. They were supplied and approved for this presentation. The original PNGs are retained without cropping or redrawing, and this provenance is also recorded in `image-credits.json` and the slide footers.
+
+| Slide | File | Source |
+| --- | --- | --- |
+| 7 · A paper-tube octopus | `illustrations/paper-tube-octopus.png` | User-approved AI-generated illustration |
+| 12 · A familiar face, your own expression | `illustrations/personal-expression.png` | User-approved AI-generated illustration |
+| 20 · My next experiment | `illustrations/group-conversation.png` | User-approved AI-generated illustration |

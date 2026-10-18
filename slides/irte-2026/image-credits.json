@@ -175,5 +175,38 @@
     "notes": "The visible timestamp is July 1 in an unverified browser display timezone. Authored slide date says July 2021; Japanese anniversary reporting uses July 2.",
     "width": 592,
     "height": 455
+  },
+  {
+    "file": "illustrations/paper-tube-octopus.png",
+    "caption": "A child making paper-tube octopuses beside a simple robot",
+    "credit": "AI-generated illustration / OpenAI ImageGen",
+    "source": "User-approved illustration supplied for the RTE 2026 presentation, October 18, 2026",
+    "generation": "AI-generated image; a hand-drawn visual style, not a documentary photograph or a human-drawn historical artifact.",
+    "reuse": "Supplied and approved for this presentation. No third-party photo license is asserted. Existing trademarks and character rights are not changed.",
+    "modification": "Original PNG preserved; proportionally scaled without cropping or redrawing.",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "file": "illustrations/personal-expression.png",
+    "caption": "Familiar robot faces with different handmade outfits and drawings",
+    "credit": "AI-generated illustration / OpenAI ImageGen",
+    "source": "User-approved illustration supplied for the RTE 2026 presentation, October 18, 2026",
+    "generation": "AI-generated image; a hand-drawn visual style, not a documentary photograph or a human-drawn historical artifact.",
+    "reuse": "Supplied and approved for this presentation. No third-party photo license is asserted. Existing trademarks and character rights are not changed.",
+    "modification": "Original PNG preserved; proportionally scaled without cropping or redrawing.",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "file": "illustrations/group-conversation.png",
+    "caption": "Several robots and a person in conversation",
+    "credit": "AI-generated illustration / OpenAI ImageGen",
+    "source": "User-approved illustration supplied for the RTE 2026 presentation, October 18, 2026",
+    "generation": "AI-generated image; a hand-drawn visual style, not a documentary photograph or a human-drawn historical artifact.",
+    "reuse": "Supplied and approved for this presentation. No third-party photo license is asserted. Existing trademarks and character rights are not changed.",
+    "modification": "Original PNG preserved; proportionally scaled without cropping or redrawing.",
+    "width": 1672,
+    "height": 941
   }
 ]
