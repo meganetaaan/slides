@@ -25,4 +25,13 @@ The supplied dependency versions are retained for reproducibility. Installation 
 
 ## Illustrated edition
 
-The illustrated edition adds AI-generated artwork to text-only pages and adjusts those pages’ layouts. Original slide wording, timing, notes, source links, photos and the speaker script remain unchanged. Baseline v5 pixel-identity results above describe the original import, not the new illustrated pages. See the current edition’s validation results once all illustrations have been received and integrated.
+The illustrated edition adds AI-generated artwork to text-only pages and adjusts those pages’ layouts. Original slide wording, timing, notes, source links, photos and the speaker script remain unchanged. Baseline v5 pixel-identity results above describe the original import, not the new illustrated pages. The nine approved illustrations are integrated on pages 3, 7, 8, 12, 14, 15, 20, 21 and 22. All 22 pages were rendered and visually checked for clipping, overlapping text, image proportions and credit placement.
+
+- `npm run build:irte-2026`: 22 pages, 1,894 English spoken words, planned 19:20, using the original locked minitype 0.1.7 toolchain.
+- `build/diagnostics.json`: empty array after adjusting the illustration text-column width.
+- All original `slides.json` fields are unchanged; only `illustration` and `illustrationCredit` are added.
+- Original visible PDF text is unchanged after removing the newly added AI illustration credits and normalizing whitespace.
+- The generated speaker script is byte-identical to the original v5 script.
+- The 13 unchanged photo pages (1, 2, 4, 5, 6, 9, 10, 11, 13, 16, 17, 18, 19) are pixel-identical to the original PDF at 72 DPI.
+- All original image credit entries and photographic image bytes are preserved. All nine illustration PNGs match the supplied originals and are identified as AI-generated in the image credits and slide footers.
+- User-only illustrated PDF SHA-256: `fd7a4891f1c5260684c2db786ec259975fe34e025f61c2fe097f0c2bd0500a0e` (16,513,772 bytes). The PDF and two excluded M5Stack images are not tracked in Git.

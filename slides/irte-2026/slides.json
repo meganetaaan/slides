@@ -71,7 +71,9 @@
     "sources": [
       "https://hackaday.io/project/181344-stack-chan-javascript-driven-super-kawaii-robot",
       "Speaker's account, October 11, 2026"
-    ]
+    ],
+    "illustration": "illustrations/service-and-repair.png",
+    "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)"
   },
   {
     "id": "origins",
@@ -152,7 +154,9 @@
     "sources": [
       "https://github.com/stack-chan/stack-chan",
       "Speaker's account, October 11, 2026"
-    ]
+    ],
+    "illustration": "illustrations/simple-robot-making.png",
+    "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)"
   },
   {
     "id": "tomorrow56",
@@ -245,7 +249,9 @@
     "sources": [
       "https://github.com/stack-chan/stack-chan/blob/main/GUIDELINE_ja.md",
       "Speaker's account, October 11, 2026"
-    ]
+    ],
+    "illustration": "illustrations/shared-guidelines.png",
+    "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)"
   },
   {
     "id": "discord",
@@ -261,7 +267,9 @@
     "sources": [
       "https://github.com/stack-chan",
       "Speaker's account, October 2026"
-    ]
+    ],
+    "illustration": "illustrations/ask-and-share.png",
+    "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)"
   },
   {
     "id": "cards",
@@ -356,7 +364,9 @@
     "sources": [
       "https://docs.google.com/presentation/d/1F6HZd5munASQ1E5YcKiYH9HYqzwtS2LFuMKvCi911TA",
       "Speaker's account, October 2026"
-    ]
+    ],
+    "illustration": "illustrations/worldwide-community.png",
+    "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)"
   },
   {
     "id": "join",
@@ -374,6 +384,8 @@
       "https://github.com/stack-chan/stack-chan",
       "https://shop.m5stack.com/products/stackchan-kawaii-co-created-open-source-ai-desktop-robot",
       "Speaker's account, October 11, 2026"
-    ]
+    ],
+    "illustration": "illustrations/open-invitation.png",
+    "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)"
   }
 ]

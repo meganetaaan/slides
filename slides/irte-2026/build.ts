@@ -34,10 +34,10 @@ function illustrated(s:Slide):Flow[]{
   ];
   if(!['statement','words','rules','future'].includes(s.layout)) throw Error(`Unsupported illustrated layout: ${s.id} (${s.layout})`);
   const flows=[...header(s),
-    ...(s.lines||[]).map((line,n)=>text(line,19,81+n*34,113,s.id==='discord'&&n===0?40:26,{bold:s.layout==='words'||s.layout==='rules'||n===0,color:s.id==='discord'&&n===0?'accent':'ink'})),
-    picture(s.illustration!,134,60,186,110)
+    ...(s.lines||[]).map((line,n)=>text(line,19,81+n*34,118,s.id==='discord'&&n===0?40:26,{bold:s.layout==='words'||s.layout==='rules'||n===0,color:s.id==='discord'&&n===0?'accent':'ink'})),
+    picture(s.illustration!,142,60,178,110)
   ];
-  if(s.layout==='future') flows.push(text(s.label||'A direction to explore',19,159,113,15,{color:'accent'}));
+  if(s.layout==='future') flows.push(text(s.label||'A direction to explore',19,159,118,15,{color:'accent'}));
   return flows;
 }
 function page(s:Slide,i:number):Group{

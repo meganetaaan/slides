@@ -208,5 +208,71 @@
     "modification": "Original PNG preserved; proportionally scaled without cropping or redrawing.",
     "width": 1672,
     "height": 941
+  },
+  {
+    "file": "illustrations/service-and-repair.png",
+    "caption": "A stopped cloud service and people keeping a robot running",
+    "credit": "AI-generated illustration / OpenAI ImageGen",
+    "source": "User-approved illustration supplied for the RTE 2026 presentation, October 18, 2026",
+    "generation": "AI-generated image; a hand-drawn visual style, not a documentary photograph or a human-drawn historical artifact.",
+    "reuse": "Supplied and approved for this presentation. No third-party photo license is asserted. Existing trademarks and character rights are not changed.",
+    "modification": "Original PNG preserved; proportionally scaled without cropping or redrawing.",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "file": "illustrations/simple-robot-making.png",
+    "caption": "Hands making a simple robot with two motors",
+    "credit": "AI-generated illustration / OpenAI ImageGen",
+    "source": "User-approved illustration supplied for the RTE 2026 presentation, October 18, 2026",
+    "generation": "AI-generated image; a hand-drawn visual style, not a documentary photograph or a human-drawn historical artifact.",
+    "reuse": "Supplied and approved for this presentation. No third-party photo license is asserted. Existing trademarks and character rights are not changed.",
+    "modification": "Original PNG preserved; proportionally scaled without cropping or redrawing.",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "file": "illustrations/shared-guidelines.png",
+    "caption": "Shared guidelines supporting different makers",
+    "credit": "AI-generated illustration / OpenAI ImageGen",
+    "source": "User-approved illustration supplied for the RTE 2026 presentation, October 18, 2026",
+    "generation": "AI-generated image; a hand-drawn visual style, not a documentary photograph or a human-drawn historical artifact.",
+    "reuse": "Supplied and approved for this presentation. No third-party photo license is asserted. Existing trademarks and character rights are not changed.",
+    "modification": "Original PNG preserved; proportionally scaled without cropping or redrawing.",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "file": "illustrations/ask-and-share.png",
+    "caption": "Makers asking questions and sharing projects online",
+    "credit": "AI-generated illustration / OpenAI ImageGen",
+    "source": "User-approved illustration supplied for the RTE 2026 presentation, October 18, 2026",
+    "generation": "AI-generated image; a hand-drawn visual style, not a documentary photograph or a human-drawn historical artifact.",
+    "reuse": "Supplied and approved for this presentation. No third-party photo license is asserted. Existing trademarks and character rights are not changed.",
+    "modification": "Original PNG preserved; proportionally scaled without cropping or redrawing.",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "file": "illustrations/worldwide-community.png",
+    "caption": "A worldwide community of different people and robots",
+    "credit": "AI-generated illustration / OpenAI ImageGen",
+    "source": "User-approved illustration supplied for the RTE 2026 presentation, October 18, 2026",
+    "generation": "AI-generated image; a hand-drawn visual style, not a documentary photograph or a human-drawn historical artifact.",
+    "reuse": "Supplied and approved for this presentation. No third-party photo license is asserted. Existing trademarks and character rights are not changed.",
+    "modification": "Original PNG preserved; proportionally scaled without cropping or redrawing.",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "file": "illustrations/open-invitation.png",
+    "caption": "An open invitation to join a making community",
+    "credit": "AI-generated illustration / OpenAI ImageGen",
+    "source": "User-approved illustration supplied for the RTE 2026 presentation, October 18, 2026",
+    "generation": "AI-generated image; a hand-drawn visual style, not a documentary photograph or a human-drawn historical artifact.",
+    "reuse": "Supplied and approved for this presentation. No third-party photo license is asserted. Existing trademarks and character rights are not changed.",
+    "modification": "Original PNG preserved; proportionally scaled without cropping or redrawing.",
+    "width": 1672,
+    "height": 941
   }
 ]

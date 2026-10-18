@@ -37,3 +37,13 @@ These images use a hand-drawn visual style but are **AI-generated with OpenAI Im
 | 7 · A paper-tube octopus | `illustrations/paper-tube-octopus.png` | User-approved AI-generated illustration |
 | 12 · A familiar face, your own expression | `illustrations/personal-expression.png` | User-approved AI-generated illustration |
 | 20 · My next experiment | `illustrations/group-conversation.png` | User-approved AI-generated illustration |
+| 3 · When a companion's service ends | `illustrations/service-and-repair.png` | User-approved AI-generated illustration |
+| 8 · Two motors and a simple face | `illustrations/simple-robot-making.png` | User-approved AI-generated illustration |
+| 14 · A shared name for our creations | `illustrations/shared-guidelines.png` | User-approved AI-generated illustration |
+| 15 · A place to ask and share | `illustrations/ask-and-share.png` | User-approved AI-generated illustration |
+| 21 · 10,000 people | `illustrations/worldwide-community.png` | User-approved AI-generated illustration |
+| 22 · Come and join us | `illustrations/open-invitation.png` | User-approved AI-generated illustration |
+
+## User-only working PDF
+
+The M5Stack store terms contain a general restriction on copying the store service without written permission. This review did not find a clause specifically addressing private storage of an already supplied presentation PDF. That is not a finding of an open image license or a legal determination about the terms. The existing user-supplied images remain in the user-only working PDF; the two original image files and every generated PDF remain excluded from public Git history. Saving a working PDF to the user’s Library does not grant public redistribution permission.

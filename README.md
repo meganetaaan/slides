@@ -24,7 +24,7 @@ Pull Request作成やmainブランチの更新時、gh-pagesにスライドが�
 
 ## RTE 2026
 
-[Growing Together: Stack-chan and Its Open-Source Community](./slides/irte-2026/README.md) の編集可能ソースと台本は `slides/irte-2026/` にあります。minitype 0.1.7 を使用します。素材の公開条件と必要なローカル画像を同ディレクトリの README で確認してください。
+[Growing Together: Stack-chan and Its Open-Source Community](./slides/irte-2026/README.md) の編集可能ソースと台本は `slides/irte-2026/` にあります。minitype 0.1.7 を使用します。文字中心の9ページには、AI生成である旨を記録した手描き風イラストを追加しています。素材の公開条件と必要なローカル画像を同ディレクトリの README で確認してください。
 
 ```console
 npm ci --prefix slides/irte-2026

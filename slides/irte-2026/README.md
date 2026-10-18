@@ -39,7 +39,7 @@ The PDF is static, 16:9, 960 × 540 points, with no runtime network requirement.
 
 ## Illustrations
 
-The current illustrated pages are 7 (paper-tube octopus), 12 (personal expression) and 20 (group conversation). Their original PNGs live under `assets/illustrations/`. Text layouts accept an optional `illustration` filename and a separate `illustrationCredit`, so the speaker script and existing photo credits remain intact. More illustrations can use the prepared word, statement, rule, goal and invitation layouts.
+The illustrated pages are 3 (service continuity), 7 (paper-tube octopus), 8 (simple robot), 12 (personal expression), 14 (guidelines), 15 (asking and sharing), 20 (group conversation), 21 (community goal) and 22 (invitation). Their original PNGs live under `assets/illustrations/`. Text layouts accept an optional `illustration` filename and a separate `illustrationCredit`, so the speaker script and existing photo credits remain intact. The layouts support word, statement, rule, goal and invitation pages without shortening the original wording.
 
 ## Placement and rights
 
