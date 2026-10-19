@@ -8,12 +8,13 @@
     "image": "stackchan-original.jpg",
     "credit": "Shinya Ishikawa / Stack-chan community",
     "duration": 5,
-    "notes": "[Show the title, then advance to slide 2 for the Chinese self-introduction.]",
+    "notes": "[Point to the palm-sized robot in the title photo. Let the caption register, then advance to slide 2 for the Chinese self-introduction.]",
     "sources": [
       "https://github.com/stack-chan/stack-chan",
       "Speaker's account, October 11, 2026"
     ],
-    "displayTitle": "Growing\nTogether"
+    "displayTitle": "Growing\nTogether",
+    "label": "Two motors. A simple face.\nMake it your own."
   },
   {
     "id": "selfintro",
@@ -62,12 +63,12 @@
     "zh": "当陪伴机器人的服务停止时",
     "layout": "words",
     "lines": [
-      "A companion can die",
-      "Everyone can develop and use"
+      "Two motors. A simple face.",
+      "Change a case. Make an outfit."
     ],
     "credit": "Source: Hackaday.io · Stack-chan project",
-    "duration": 73,
-    "notes": "A communication robot can become a companion. When its proprietary service ends, that companion can die while its body is still beside you. A closed design makes it harder for owners to keep it working. I wanted people to repair their robots, replace services, and keep them running. I wanted a community where everyone could be both a developer and a user, rather than one company making things for everyone else. That future still needs people's care. This story begins with my own making. The circles show entrances expanding, with personal making at the center. They describe overlapping activities rather than when each person joined. First, I had to learn to build a robot.",
+    "duration": 67,
+    "notes": "Stack-chan is a palm-sized, open-source robot with two motors and a simple face. People change a case to fit a motor they already own, or make outfits and comics. Today I want to show how those small acts changed the community—and changed me.\n\nA communication robot can become a companion. When its proprietary service ends, that companion can die while its body is still beside you. I wanted people to repair their robots, replace services, and keep them running. I wanted a community where everyone could be both a developer and a user. First, let me show how I learned to build this robot.",
     "sources": [
       "https://hackaday.io/project/181344-stack-chan-javascript-driven-super-kawaii-robot",
       "Speaker's account, October 11, 2026",
@@ -162,14 +163,21 @@
     "image": "m5stack-basic-device.jpg",
     "credit": "M5Stack",
     "side": "M5Stack\nShared projects\nPeople helping people",
-    "duration": 50,
-    "notes": "The next circle adds other makers, while personal projects remain inside. I already belonged to a maker community around M5Stack, a compact module with a screen. Makers shared projects and advice, and distributors such as Switch Science helped make the hardware available. I learned from their work. Some became Stack-chan's first builders. The rough first version took effort to assemble. Sharing the design was a start; people willing to try it and help made it useful.",
+    "duration": 57,
+    "notes": "This circle shows other makers, alongside personal making. The circles show overlapping ways in, not the order people joined. I already belonged to a maker community around M5Stack, a compact module with a screen. Makers shared projects and advice, and distributors such as Switch Science helped make the hardware available. I learned from their work. Some became Stack-chan's first builders. The rough first version took effort to assemble. Sharing the design was a start; people willing to try it and help made it useful.",
     "sources": [
       "https://slides.com/meganetaaan/m5stack",
       "https://shop.m5stack.com/products/esp32-basic-core-iot-development-kit-v2-6"
     ],
     "section": 2,
-    "sectionStart": true
+    "sectionStart": true,
+    "stageDirections": [
+      {
+        "beforeParagraph": 0,
+        "text": "Point from the central robot to the wider ring. Pause for 2 seconds.",
+        "pauseSeconds": 2
+      }
+    ]
   },
   {
     "id": "tomorrow56",
@@ -211,8 +219,8 @@
       "A defensive trademark",
       "A shared name for makers and companies"
     ],
-    "duration": 51,
-    "notes": "Registering a trademark might sound like a bit much for a personal hobby. But the name had become something we shared. For me, holding it as the original creator mattered: I wanted the name to stay open to people using different hardware, including M5Stack's, rather than become the product name of one manufacturer. My aim was to make room for both individual makers and companies. The trademark came before the derivative-work guidelines. Code licenses and the shared name each have their own rules.",
+    "duration": 57,
+    "notes": "Registering a trademark might sound like a bit much for a personal hobby. But the name had become something we shared. As the original creator, I wanted the name to stay open across different hardware, including M5Stack's. I wanted individual makers and companies to share it, rather than tie it to one manufacturer's products.\n\nPlease check the published guidelines for the conditions that apply, and ask if your use is unclear. Code licenses and the shared name each have their own rules. The trademark came before the derivative-work guidelines.",
     "sources": [
       "https://github.com/stack-chan/stack-chan/blob/main/GUIDELINE_ja.md",
       "Speaker's account, October 11, 2026",
@@ -220,7 +228,15 @@
     ],
     "illustration": "illustrations/shared-guidelines.png",
     "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)",
-    "section": 2
+    "section": 2,
+    "label": "Use conditions: published guidelines",
+    "stageDirections": [
+      {
+        "beforeParagraph": 1,
+        "text": "Indicate the published-guidelines label. Pause for 2 seconds.",
+        "pauseSeconds": 2
+      }
+    ]
   },
   {
     "id": "takao",
@@ -246,8 +262,8 @@
     "image": "stack-san-portrait.jpg",
     "credit": "Latte / ProtoPedia · Comic: @sylacwa — x.com/sylacwa/status/1557313306737754112/photo/1",
     "side": "Stack-san by Latte\nComics and outfits too",
-    "duration": 64,
-    "notes": "This circle adds more ways to create; the earlier ways are still here. This is Stack-san, a wearable creation by Latte. Its scale and the way it meets people are very different from my desk robot. Beside it is a four-panel comic by sylacwa. Other people make outfits or tell stories about their Stack-chans. I hadn't anticipated these forms of participation. On Twitter, I noticed people whose interests were different from the engineering circles I knew. They were enjoying the same character through their own kinds of making. Engineering remained important, with more ways to take part alongside it.",
+    "duration": 62,
+    "notes": "This circle adds more ways to create. This is Stack-san, a wearable creation by Latte. Its scale and the way it meets people are very different from my desk robot. Beside it is a four-panel comic by sylacwa. Other people make outfits or tell stories about their Stack-chans. I hadn't anticipated these forms of participation. On Twitter, I noticed people whose interests were different from the engineering circles I knew. They were enjoying the same character through their own kinds of making. Engineering remained important, with more ways to take part alongside it.",
     "sources": [
       "https://protopedia.net/prototype/4058",
       "Speaker's account, October 11, 2026",
@@ -256,7 +272,14 @@
     "section": 3,
     "sectionStart": true,
     "displayTitle": "Many kinds\nof making",
-    "comic": "private/sylacwa-stack-diary-12.jpeg"
+    "comic": "private/sylacwa-stack-diary-12.jpeg",
+    "stageDirections": [
+      {
+        "beforeParagraph": 0,
+        "text": "Point to the new creative activities, leaving the earlier rings visible. Pause for 2 seconds.",
+        "pauseSeconds": 2
+      }
+    ]
   },
   {
     "id": "role",
@@ -338,8 +361,8 @@
     "image": "robo8080-ai-stackchan.jpg",
     "credit": "robo8080 / ProtoPedia, CC BY 4.0",
     "side": "robo8080\nAn early maker opens new entrances",
-    "duration": 68,
-    "notes": "This circle shows new entrances, not a new generation of members. robo8080 was already part of the M5Stack community and was exploring AI in 2022. Later, he connected Stack-chan to an LLM and created AI Stack-chan. Other people shared tutorials and further integrations. An experienced member's experiments opened an entrance for people who had never built a robot. They could start with an interest in AI and meet a physical robot they could change. Personal making, hardware adaptations, and creative expression continued alongside it. The circles describe wider possibilities, rather than the order in which these people joined. A ready-made product offers another way to begin.",
+    "duration": 60,
+    "notes": "An existing maker opened another entrance through AI. robo8080 was already part of the M5Stack community and was exploring AI in 2022. Later, he connected Stack-chan to an LLM and created AI Stack-chan. Other people shared tutorials and further integrations. An experienced member's experiments opened an entrance for people who had never built a robot. They could start with an interest in AI and meet a physical robot they could change. Personal making, hardware adaptations, and creative expression continued alongside it. A ready-made product offers another way to begin.",
     "sources": [
       "https://protopedia.net/prototype/4052",
       "https://creativecommons.org/licenses/by/4.0/",
@@ -348,7 +371,14 @@
       "Speaker's clarification: M5Stack-era participation and AI activity in 2022, October 2026"
     ],
     "section": 4,
-    "sectionStart": true
+    "sectionStart": true,
+    "stageDirections": [
+      {
+        "beforeParagraph": 0,
+        "text": "Point to the AI entrance while keeping the earlier activities in view. Pause for 2 seconds.",
+        "pauseSeconds": 2
+      }
+    ]
   },
   {
     "id": "commercial",
@@ -376,8 +406,8 @@
       "Several robots talking together",
       "A person can listen, then join"
     ],
-    "duration": 88,
-    "notes": "The dotted outside circle is open for what comes next. The earlier ways, including my own making at the center, stay with it. As the community grew, my role changed too. At different stages, we needed manuals, a trademark, guidelines, tools for communication, and even business cards. I tried to respond to the community's needs as they emerged, and each stage taught me something new. The members grew, the community grew, and I grew with them. I want to try several Stack-chans talking together, with a person listening and joining when something interests them. Which robot speaks next? Where does it look? How does it notice someone wants to join? Blinking, gaze, small movements, and pauses still matter, even with two motors. This is an experiment I want to explore, rather than a finished system I am showing today.",
+    "duration": 77,
+    "notes": "The dotted outside circle is open for what comes next.\n\nAs the community grew, my role changed too: manuals, a trademark, guidelines, communication tools, and business cards. I learned to respond to what people needed. Growing Together means this too: the members grew, the community grew, and I grew with them.\n\nI want to try several Stack-chans talking together, with a person listening and joining when something interests them. Which robot speaks next? Where does it look? How does it notice someone wants to join? Blinking, gaze, small movements, and pauses still matter, even with two motors. This is an experiment I want to explore, rather than a finished system I am showing today.",
     "sources": [
       "Speaker's account, October 2026",
       "Speaker's approved additions, October 2026"
@@ -385,7 +415,19 @@
     "illustration": "illustrations/group-conversation.png",
     "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)",
     "section": 5,
-    "sectionStart": true
+    "sectionStart": true,
+    "stageDirections": [
+      {
+        "beforeParagraph": 0,
+        "text": "Point to the dotted outside ring. Pause for 2 seconds.",
+        "pauseSeconds": 2
+      },
+      {
+        "beforeParagraph": 1,
+        "text": "Turn from the diagram to the audience. Pause for 2 seconds after “I grew with them.”",
+        "pauseSeconds": 2
+      }
+    ]
   },
   {
     "id": "goal",
@@ -394,12 +436,12 @@
     "layout": "dual-goal",
     "lines": [
       "Two long-term goals",
-      "10,000 people worldwide",
-      "A goal, not a current headcount",
-      "Five years old: halfway, and ready to play"
+      "Community goal: 10,000 worldwide",
+      "A future goal, not today's headcount",
+      "Five years old: curious, playful, still making"
     ],
-    "duration": 70,
-    "notes": "I have two long-term goals. One is a community of ten thousand people around the world. It is a goal for the future, rather than a current headcount. The other is a robot you can start developing in ten minutes and keep making with for ten years. Stack-chan is five years old, halfway through that ten-year horizon. Five is also an age for curiosity, play, and making friends. I want the next five years to leave room for adventures we haven't imagined yet. The community can be a safe base: somewhere to ask for help, share an unfinished attempt, and return after something fails. That support can make it easier to try something new.",
+    "duration": 75,
+    "notes": "I have two long-term goals.\n\nOne is a robot you can start developing in ten minutes and keep making with for ten years.\n\nThe other is a community of ten thousand people around the world. That is a goal for the future, not our current headcount.\n\nStack-chan is five years old, halfway through that ten-year horizon. Five is an age for curiosity, play, and making friends. I want the next five years to leave room for adventures we haven't imagined yet.\n\nThe community can be a safe base: somewhere to ask for help, share an unfinished attempt, and return after something fails. That support can make it easier to try something new.",
     "sources": [
       "https://docs.google.com/presentation/d/1F6HZd5munASQ1E5YcKiYH9HYqzwtS2LFuMKvCi911TA",
       "Speaker's approved goals and closing, October 2026"
@@ -407,7 +449,24 @@
     "section": 5,
     "displayTitle": "10 minutes to begin\n10 years to keep making",
     "image": "private/ten-minutes-ten-years.png",
-    "credit": "Goal illustration supplied by the speaker; unmodified"
+    "credit": "Goal illustration supplied by the speaker; unmodified",
+    "stageDirections": [
+      {
+        "beforeParagraph": 1,
+        "text": "Present ten minutes and ten years as one pair. Pause for 2 seconds after the pair.",
+        "pauseSeconds": 2
+      },
+      {
+        "beforeParagraph": 2,
+        "text": "Start a separate beat for the future community goal. Pause for 2 seconds after this paragraph.",
+        "pauseSeconds": 2
+      },
+      {
+        "beforeParagraph": 3,
+        "text": "Start a separate beat for the five-year-old project. Pause for 2 seconds after this paragraph.",
+        "pauseSeconds": 2
+      }
+    ]
   },
   {
     "id": "join",
@@ -418,8 +477,8 @@
       "A safe base for\nnew adventures",
       "Experiments and\nmistakes welcome"
     ],
-    "duration": 62,
-    "notes": "Come and join us. You can build your own robot or begin with an M5StackChan, then bring something you enjoy making. You can program, draw a comic, make an outfit, share a photo, or tell us where you got stuck. I want the community to be a safe base that welcomes experiments and mistakes. From there, we can go out and try our own adventures. You can make something ambitious, or enjoy a small two-motor robot at your own pace. I will keep making things myself and helping other people make theirs. Today, being here is my small adventure. Thank you.",
+    "duration": 63,
+    "notes": "Come and join us. You can build your own robot or begin with an M5StackChan, then bring something you enjoy making. You can program, draw a comic, make an outfit, share a photo, or tell us where you got stuck. I want the community to be a safe base that welcomes experiments and mistakes. From there, we can go out and try our own adventures. You can make something ambitious, or enjoy a small two-motor robot at your own pace.\n\nWe are growing together: the makers, the community, and me. Today, being here is my small adventure. Thank you.",
     "sources": [
       "https://github.com/stack-chan",
       "https://github.com/stack-chan/stack-chan",
@@ -430,7 +489,14 @@
     ],
     "illustration": "illustrations/open-invitation.png",
     "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)",
-    "closing": "Today, being here is my small adventure.",
-    "section": 5
+    "closing": "Growing Together—with you.",
+    "section": 5,
+    "stageDirections": [
+      {
+        "beforeParagraph": 1,
+        "text": "Look toward the audience. Pause for 2 seconds after “the makers, the community, and me.”",
+        "pauseSeconds": 2
+      }
+    ]
   }
 ]

@@ -77,9 +77,11 @@ for(let i=0;i<matches.length;i++){
     if(!line){doc.moveDown(.35);continue;}
     if(line.startsWith('[READ ALOUD — ENGLISH'))mode='english';
     else if(line==='[READ ALOUD — CHINESE]')mode='chinese';
+    else if(line.startsWith('[STAGE DIRECTION'))mode='stage';
     else if(line==='[END OF SPOKEN TEXT]'||line.startsWith('[REFERENCE ONLY'))mode='reference';
     if(/^\d{2}  /.test(line))textLine(line,{size:20,bold:true});
     else if(line.startsWith('SECTION '))textLine(line,{size:11,color:accent,bold:true});
+    else if(line.startsWith('[STAGE DIRECTION'))textLine(line,{size:10,color:muted,bold:true});
     else if(line.startsWith('[READ ALOUD'))textLine(line,{size:10,color:accent,bold:true});
     else if(line==='[END OF SPOKEN TEXT]')textLine(line,{size:10,color:red,bold:true});
     else if(mode==='english')spokenEnglish(line);

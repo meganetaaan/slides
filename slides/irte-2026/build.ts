@@ -4,7 +4,7 @@ import { minitype, p, image, url, pt, fill, rgb, type Group, type Flow } from '@
 import { growthRings, sections } from './growth-rings.js';
 import { emphasisSpans, emphasizeMarkdown, type EmphasisSpan } from './speech-emphasis.js';
 
-type Slide = {id:string;title:string;displayTitle?:string;zh:string;subtitle?:string;layout:string;image?:string;images?:string[];comic?:string;illustration?:string;illustrationCredit?:string;credit?:string;side?:string;lines?:string[];closing?:string;section?:number;sectionStart?:boolean;duration:number;notes:string;sources:string[];label?:string;pronunciation?:{zh:string;pinyin:string;ja:string}[];englishTransition?:string};
+type Slide = {id:string;title:string;displayTitle?:string;zh:string;subtitle?:string;layout:string;image?:string;images?:string[];comic?:string;illustration?:string;illustrationCredit?:string;credit?:string;side?:string;lines?:string[];closing?:string;section?:number;sectionStart?:boolean;duration:number;notes:string;stageDirections?:{beforeParagraph:number;text:string;pauseSeconds:number}[];sources:string[];label?:string;pronunciation?:{zh:string;pinyin:string;ja:string}[];englishTransition?:string};
 const slides:Slide[]=JSON.parse(await fs.readFile('slides.json','utf8'));
 const dimensions:Record<string,number[]>=JSON.parse(await fs.readFile('asset-dimensions.json','utf8'));
 const speechEmphasis:Record<string,string[]>=JSON.parse(await fs.readFile('speech-emphasis.json','utf8'));
@@ -71,6 +71,7 @@ function illustrated(s:Slide):Flow[]{
     ...(s.lines||[]).map((line,n)=>text(line,19,81+n*34,s.id==='trademark'?125:118,s.id==='discord'&&n===0?40:26,{bold:s.layout==='words'||s.layout==='rules'||n===0,color:s.id==='discord'&&n===0?'accent':'ink'})),
     picture(s.illustration!,142,60,178,102)
   ];
+  if(s.id==='trademark'&&s.label) flows.push(text(s.label,19,157,120,14,{color:'accent',href:'https://github.com/stack-chan/stack-chan/blob/main/GUIDELINE_ja.md'}));
   if(s.layout==='future') flows.push(text(s.label||'A direction to explore',19,159,118,15,{color:'accent'}));
   return flows;
 }
@@ -90,6 +91,7 @@ function page(s:Slide,i:number):Group{
     b=illustrated(s);
   }else if(s.layout==='cover'){
     b=[text(s.displayTitle||s.title,18,25,180,58,{bold:true}),text(s.zh,20,80,166,28,{zh:true,color:'accent'}),text(s.subtitle!,20,110,175,24),picture(s.image!,198,47,122,100),text('Shinya Ishikawa',20,153,180,20,{bold:true}),text('Creator of Stack-chan  ·  RTE 2026',20,166,230,15,{color:'muted'})];
+    if(s.label) b.push(text(s.label,198,151,122,14,{color:'accent',align:'center'}));
   }else if(s.layout==='intro'){
     b=[picture(s.image!,18,10,302,158)];
   }else if(s.layout==='wide'){
@@ -148,35 +150,55 @@ const speechSeconds=englishWordCount/assumedWordsPerMinute*60;
 const pauseSeconds=totalSeconds-chineseSeconds-5-speechSeconds;
 const recordingReference={seconds:1001.895,englishWords:1616,endingSegmentWords:171,endingSegmentSeconds:90,approximateEndingWordsPerMinute:115};
 const netEnglishWords=englishWordCount-recordingReference.englishWords;
-const recordingProjection={minimumSeconds:recordingReference.seconds+netEnglishWords/115*60,maximumSeconds:recordingReference.seconds+netEnglishWords/100*60};
+const explicitPauseSeconds=slides.reduce((n,s)=>n+(s.stageDirections||[]).reduce((m,c)=>m+c.pauseSeconds,0),0);
+const recordingProjection={minimumSeconds:recordingReference.seconds+netEnglishWords/115*60+explicitPauseSeconds,maximumSeconds:recordingReference.seconds+netEnglishWords/100*60+explicitPauseSeconds};
 if(slides.length!==22||totalSeconds>1200||pauseSeconds<0) throw Error('Presentation exceeds the 20-minute planning budget');
-const recordingGuide='Previous-script recording reference: 16:41.895. The final 90-second segment contained approximately 171 words (about 115 words/minute including pauses); this is not a measured whole-talk rate. Net English change: '+netEnglishWords+' words. Adding the new material at 100–115 words/minute to that recording gives approximately '+time(Math.round(recordingProjection.minimumSeconds))+'–'+time(Math.round(recordingProjection.maximumSeconds))+'. This is a projection, not a completed rehearsal of the revised script. The conservative schedule below still uses 100 elapsed English words/minute plus additional viewing time.\n\n';
-let script='GROWING TOGETHER\nStack-chan and Its Open-Source Community\nShinya Ishikawa\nRTE 2026 · Growth Rings edition · October 19, 2026\n\nREHEARSAL GUIDE\n'+recordingGuide+slides.length+' slides in five sections. Planning budget: '+time(totalSeconds)+' plus '+time(1200-totalSeconds)+' margin before 20:00. Approximately '+englishWordCount+' English spoken words, plus the unchanged Chinese introduction. At a conservative elapsed pace of 100 English words per minute (including ordinary pauses), allow about '+time(Math.round(speechSeconds))+' for English, 0:50 for Chinese, 0:05 for the opening, and '+time(Math.round(pauseSeconds))+' for additional slide transitions and diagram viewing. The self-introduction slide has a 0:58 total budget, including its English transition. This new-script budget is an estimate, not a measured delivery time. Rehearse aloud and adjust pauses. Read only the sections marked READ ALOUD. Everything after END OF SPOKEN TEXT is reference material and must not be read aloud. The rings show overlapping ways to take part, not population, maturity or a verified timeline. Only the outer future ring is dotted. The PDF is static and needs no network, simulator or live demonstration. Only the self-introduction is spoken in Chinese; the main talk is in English.\n\n';
+const recordingGuide='Previous-script recording reference: 16:41.895. The final 90-second segment contained approximately 171 words (about 115 words/minute including pauses); this is not a measured whole-talk rate. Net English change: '+netEnglishWords+' words. Applying that net change at 100–115 words/minute and allowing '+explicitPauseSeconds+' seconds for newly marked stage pauses gives approximately '+time(Math.round(recordingProjection.minimumSeconds))+'–'+time(Math.round(recordingProjection.maximumSeconds))+'. This is a projection, not a completed rehearsal of the revised script. The conservative schedule below still uses 100 elapsed English words/minute plus additional viewing time.\n\n';
+let script='GROWING TOGETHER\nStack-chan and Its Open-Source Community\nShinya Ishikawa\nRTE 2026 · Growth Rings edition · October 19, 2026\n\nREHEARSAL GUIDE\n'+recordingGuide+slides.length+' slides in five sections. Planning budget: '+time(totalSeconds)+' plus '+time(1200-totalSeconds)+' margin before 20:00. Approximately '+englishWordCount+' English spoken words, plus the unchanged Chinese introduction. At a conservative elapsed pace of 100 English words per minute (including ordinary pauses), allow about '+time(Math.round(speechSeconds))+' for English, 0:50 for Chinese, 0:05 for the opening, and '+time(Math.round(pauseSeconds))+' for additional slide transitions and diagram viewing. The self-introduction slide has a 0:58 total budget, including its English transition. This new-script budget is an estimate, not a measured delivery time. Rehearse aloud and adjust pauses. Read only the sections marked READ ALOUD. Every STAGE DIRECTION block and everything after END OF SPOKEN TEXT is non-spoken material and must not be read aloud. The marked stage pauses are included in the conservative schedule. The rings show overlapping ways to take part, not population, maturity or a verified timeline. Only the outer future ring is dotted. The PDF is static and needs no network, simulator or live demonstration. Only the self-introduction is spoken in Chinese; the main talk is in English.\n\n';
 slides.forEach((s,i)=>{
  const noteStart=script.length;
+ const spokenRuns:{spokenStart:number;scriptStart:number;length:number}[]=[];
  const start=seconds;seconds+=s.duration;
  if(s.sectionStart) script+=`SECTION ${s.section}  ${sections[s.section!-1].title}\n\n`;
  script+=`${String(i+1).padStart(2,'0')}  ${s.title}\n${s.zh}\nTarget ${time(start)}–${time(seconds)}\n\n`;
  if(s.id==='cover'){
   script+='[STAGE DIRECTION — DO NOT READ ALOUD]\n'+s.notes+'\n\n[END OF SPOKEN TEXT]\n\n[REFERENCE ONLY — DO NOT READ ALOUD]\n';
  }else if(s.pronunciation){
-  script+='[READ ALOUD — CHINESE]\n'+s.notes+'\n\n[READ ALOUD — ENGLISH TRANSITION]\n'+s.englishTransition+'\n\n[END OF SPOKEN TEXT]\n\n[REFERENCE ONLY — DO NOT READ ALOUD]\n';
+  script+='[READ ALOUD — CHINESE]\n'+s.notes+'\n\n[READ ALOUD — ENGLISH TRANSITION]\n';
+  spokenRuns.push({spokenStart:0,scriptStart:script.length,length:s.englishTransition!.length});
+  script+=s.englishTransition+'\n\n[END OF SPOKEN TEXT]\n\n[REFERENCE ONLY — DO NOT READ ALOUD]\n';
   script+='中国語の自己紹介（約45秒の練習枠）\n各行は「中国語 → 声調付きピンイン → 日本語訳」の順です。本番で読むのは中国語だけです。\n\n名前は名刺どおり Shinya Ishikawa と表記しています。名刺に漢字の氏名はないため、漢字名や中国語読みは補っていません。名前は普段の日本語の発音で、Stack-chan は「スタックチャン」と読んでください。角括弧の部分はピンインではありません。\n\n';
   s.pronunciation.forEach((line,j)=>{script+=`${j+1}. ${line.zh}\n${line.pinyin}\n${line.ja}\n\n`;});
   script+='発音メモ（読み上げない）\nピンインの母音の上の記号は声調です。第1声 ā は高く平ら、第2声 á は上がる、第3声 ǎ は低く沈む、第4声 à は短く下がります。記号のない de は軽く短く発音します。カタカナでは音と声調を十分に表せないので、ピンインを基本に練習してください。句点でひと呼吸置き、名前と Stack-chan はいつもの発音で大丈夫です。\n\n';
- }else script+='[READ ALOUD — ENGLISH]\n'+s.notes+'\n\n[END OF SPOKEN TEXT]\n\n[REFERENCE ONLY — DO NOT READ ALOUD]\n';
+ }else{
+  const paragraphs=s.notes.split('\n\n');
+  const cues=s.stageDirections||[];
+  if(cues.some(c=>!Number.isInteger(c.beforeParagraph)||c.beforeParagraph<0||c.beforeParagraph>=paragraphs.length||c.pauseSeconds<0)||new Set(cues.map(c=>c.beforeParagraph)).size!==cues.length) throw Error(`Invalid stage direction: ${s.id}`);
+  let spokenStart=0;
+  paragraphs.forEach((paragraph,index)=>{
+   const cue=cues.find(c=>c.beforeParagraph===index);
+   if(cue) script+='[STAGE DIRECTION — DO NOT READ ALOUD]\n['+cue.text+']\n\n';
+   script+='[READ ALOUD — ENGLISH]\n';
+   spokenRuns.push({spokenStart,scriptStart:script.length,length:paragraph.length});
+   script+=paragraph+'\n\n';
+   spokenStart+=paragraph.length+2;
+  });
+  script+='[END OF SPOKEN TEXT]\n\n[REFERENCE ONLY — DO NOT READ ALOUD]\n';
+ }
  script+=`Sources and image credits — DO NOT READ ALOUD\n${s.credit?s.credit+'\n':''}${s.sources.join('\n')}\n\n`;
  const chunk=script.slice(noteStart);
  const notePrefix='[SLIDE / TIMING — DO NOT READ]\n';
  const spoken=s.id==='selfintro'?s.englishTransition!:s.id==='cover'?'':s.notes;
  const emphasis:EmphasisSpan[]=[];
  if(spoken){
-  const marker=chunk.indexOf('[READ ALOUD — ENGLISH');
-  const offset=chunk.indexOf(spoken,marker);
-  if(marker<0||offset<marker||offset+spoken.length>chunk.indexOf('[END OF SPOKEN TEXT]')) throw Error(`Cannot locate English speech: ${s.id}`);
   for(const span of emphasisSpans(spoken,speechEmphasis[s.id]||[])){
-   emphasis.push({...span,startIndex:notePrefix.length+offset+span.startIndex,endIndex:notePrefix.length+offset+span.endIndex});
-   scriptEmphasis.push({...span,startIndex:noteStart+offset+span.startIndex,endIndex:noteStart+offset+span.endIndex});
+   const run=spokenRuns.find(r=>span.startIndex>=r.spokenStart&&span.endIndex<=r.spokenStart+r.length);
+   if(!run) throw Error(`Emphasis crosses a stage direction: ${s.id}`);
+   const startIndex=run.scriptStart+span.startIndex-run.spokenStart;
+   const endIndex=startIndex+span.endIndex-span.startIndex;
+   if(script.slice(startIndex,endIndex)!==span.text) throw Error(`Cannot locate English emphasis: ${s.id}`);
+   emphasis.push({...span,startIndex:notePrefix.length+startIndex-noteStart,endIndex:notePrefix.length+endIndex-noteStart});
+   scriptEmphasis.push({...span,startIndex,endIndex});
   }
  }
  speakerNotes.push({page:i+1,id:s.id,title:s.title,notes:notePrefix+chunk.trim(),emphasis});
@@ -184,5 +206,5 @@ slides.forEach((s,i)=>{
 await fs.writeFile('output/RTE2026-Growing-Together-Rings-Speaker-Script.txt',script);
 await fs.writeFile('output/Speaker-Script-Emphasis.md',emphasizeMarkdown(script,scriptEmphasis));
 await fs.writeFile('build/speaker-notes.json',JSON.stringify(speakerNotes,null,2));
-await fs.writeFile('build/presentation-checks.json',JSON.stringify({pages:count,sections:sections.map((section,index)=>({...section,pages:slides.flatMap((s,i)=>s.section===index+1?[i+1]:[])})),englishWordCount,totalSeconds,marginSeconds:1200-totalSeconds,assumedEnglishWordsPerMinute:assumedWordsPerMinute,paceIncludesOrdinaryPauses:true,englishElapsedSeconds:speechSeconds,chineseSeconds,openingSeconds:5,additionalViewingSeconds:pauseSeconds,netEnglishWords,recordingReference,recordingProjection},null,2));
+await fs.writeFile('build/presentation-checks.json',JSON.stringify({pages:count,sections:sections.map((section,index)=>({...section,pages:slides.flatMap((s,i)=>s.section===index+1?[i+1]:[])})),englishWordCount,totalSeconds,marginSeconds:1200-totalSeconds,assumedEnglishWordsPerMinute:assumedWordsPerMinute,paceIncludesOrdinaryPauses:true,englishElapsedSeconds:speechSeconds,chineseSeconds,openingSeconds:5,additionalViewingSeconds:pauseSeconds,explicitPauseSeconds,netEnglishWords,recordingReference,recordingProjection},null,2));
 console.log(`Created ${count} pages. Planned duration ${time(seconds)}. English words ${englishWordCount}. Script written.`);

@@ -1,6 +1,8 @@
 # Growing Together · RTE 2026
 
-Current approved revision: 22 slides, 1,721 English spoken words (+105 from the previous script), plus the unchanged Chinese self-introduction. The previous-script recording was 16:41.895. Adding 105 words at 100–115 words/minute projects approximately 17:37–17:45; the approximately 115 words/minute figure describes only its final 90-second segment, not a measured whole-talk rate. The revised script has not been timed in a new rehearsal. A separate conservative schedule at 100 elapsed English words/minute, with Chinese, opening and additional viewing time, totals 18:50 with 1:10 to spare before 20:00.
+Current approved revision: 22 slides, 1,673 English spoken words (48 fewer than the preceding 1,721-word script), plus the unchanged Chinese self-introduction. The conservative schedule at 100 elapsed English words/minute, with Chinese, opening and additional viewing/transition time, totals 18:42 with 1:18 to spare before 20:00. This includes 20 seconds of newly marked stage pauses. These are estimates, not a measured rehearsal of the revised script.
+
+The earlier 1,616-word recording was 16:41.895. Applying the net +57 words at 100–115 words/minute and allowing 20 seconds for the new marked pauses projects approximately 17:32–17:36. The approximately 115 words/minute figure describes only the recording’s final 90-second segment, not a measured whole-talk rate. Reordering, delivery and ordinary pauses can change the actual time.
 
 Based on the original v5 and the illustrated edition. The editable source uses `@minitype/minitype` 0.1.7. The growth-rings edition organizes the talk into five overlapping ways of taking part within the original 22 slides. Chinese introduction and pronunciation guidance, existing photos, source links, artwork PNGs and the dependency lockfile are retained.
 
@@ -78,9 +80,9 @@ Two further assets are private and ignored by Git: `assets/private/sylacwa-stack
 
 ## Sentence stress for reading aloud
 
-`Speaker-Script-Emphasis.md` contains the same complete script with selective bold words and short phrases for sentence-level stress. Removing its `**` markers reproduces `Speaker-Script.txt` byte for byte. The speech, sequence, Chinese introduction/reading guide and non-spoken references remain unchanged. Bold is a suggested emphasis cue, not syllable pronunciation, a mandatory stress on every sentence, a timing revision or evidence of a completed rehearsal.
+`Speaker-Script-Emphasis.md` contains the same complete script with selective bold words and short phrases for sentence-level stress. Removing its `**` markers reproduces `Speaker-Script.txt` byte for byte. The markup itself does not change the speech or non-spoken text; the complete Chinese introduction and reading guide are retained. Bold is a suggested emphasis cue, not syllable pronunciation, a mandatory stress on every sentence, a timing revision or evidence of a completed rehearsal.
 
-`speech-emphasis.json` is the shared list of exact phrases. `speech-emphasis.ts` validates unique matches and produces both Markdown and per-note UTF-16 ranges in `build/speaker-notes.json`. These ranges are applied as native Google Slides bold text styles without rewriting note text or altering slide images. Existing read-aloud labels, red end markers and gray references remain intact.
+`speech-emphasis.json` is the shared list of exact phrases. `speech-emphasis.ts` validates unique matches and produces both Markdown and per-note UTF-16 ranges in `build/speaker-notes.json`. These ranges style English speech within the current native Google Slides notes; they exclude stage directions and citations. Existing read-aloud labels, red end markers and gray references remain intact.
 
 After the normal build, generate the printable practice script with:
 
@@ -88,11 +90,22 @@ After the normal build, generate the printable practice script with:
 npm run build:speaker-script-pdf
 ```
 
-`output/RTE2026-Speaker-Script-Emphasis.pdf` contains all 22 slide sections, rehearsal guidance, the full Chinese reading guide and source notes across 24 A4 pages. English speech uses 16-point regular and bold Noto Sans; non-spoken material is smaller and gray. The PDF uses the installed PDFKit dependency and existing bundled fonts. Generated PDFs remain ignored by Git.
+`output/RTE2026-Speaker-Script-Emphasis.pdf` contains all 22 slide sections, rehearsal guidance, the full Chinese reading guide and source notes across 25 A4 pages. English speech uses 16-point regular and bold Noto Sans; non-spoken material is smaller and gray. The PDF uses the installed PDFKit dependency and existing bundled fonts. Generated PDFs remain ignored by Git.
 
 
 ## Name, participation and the creator’s changing role
 
-The latest approved additions explain M5Stack + the affectionate Japanese suffix “chan,” a community where people can be both developers and users, the bridge into the kindergarten memory, the shared-name intent, and how the creator’s responsibilities changed with the community. They replace redundant wording where possible. Spoken changes are limited to pages 3, 5, 6, 11 and 20; visible text changes are on pages 3, 5, 11 and 20. All 22 pages, pictures and hand-drawn ring artwork remain. Sentence-stress selections now contain 112 exact spans.
+The latest approved additions explain M5Stack + the affectionate Japanese suffix “chan,” a community where people can be both developers and users, the bridge into the kindergarten memory, the shared-name intent, and how the creator’s responsibilities changed with the community. They replace redundant wording where possible. Spoken changes are limited to pages 3, 5, 6, 11 and 20; visible text changes are on pages 3, 5, 11 and 20. All 22 pages, pictures and hand-drawn ring artwork remain. Sentence-stress selections now contain 117 exact spans.
 
 The complete Chinese introduction and pronunciation guide are unchanged. No TTS engine, generated audio, credential or private review-session files are part of this repository. Local first-reader sessions are ignored under `.first-reader/`; the review is a separate deliverable.
+
+
+## Concrete opening and speaking beats
+
+The title photo now has a short two-motor caption. Page 3 previews the existing case-change, outfit and comic examples before the personal origin story. The ring explanation is consolidated on page 8: overlapping ways in, rather than when people joined. Later pages retain the earlier activities and robo8080’s established participation while avoiding repeated definitions.
+
+The ten-minute / ten-year pair is one spoken paragraph, followed by separate paragraphs for the future 10,000-person goal and the five-year-old project. The creator’s changing responsibilities return to “Growing Together” on page 20 and in the closing. Page 11 explicitly directs listeners to the published guidelines for applicable conditions and questions, without adding unconditional permission or the former-employer account. The existing final GitHub URL remains.
+
+Optional `stageDirections` entries in `slides.json` use zero-based `beforeParagraph`, `text` and `pauseSeconds`. Separate spoken paragraphs with a blank line. The build emits clearly marked STAGE DIRECTION blocks between READ ALOUD blocks, maps emphasis to the spoken paragraphs, and counts only speech as English words. Stage directions are gray and non-spoken in the PDF and native notes. Their planned pauses are counted in the schedule.
+
+Visible changes are limited to pages 1, 3, 11, 21 and 22. All source image bytes and ring placements remain unchanged. The complete Chinese introduction, English transition and pronunciation guide remain identical.
