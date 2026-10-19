@@ -51,3 +51,11 @@ The M5Stack store terms contain a general restriction on copying the store servi
 ## Reference-based growth-ring artwork
 
 The five PNGs under `assets/growth-rings/` were recreated with the built-in OpenAI ImageGen tool using the user-approved growth-ring mockup as the reference. The old program-drawn circle and robot substitutes have been removed. People, clothing, tools, gray previous layers, yellow arcs and future footsteps follow that reference; the results are reference-based recreations rather than pixel-identical crops. The complete mockup is not pasted into a slide. The supplied photographs and earlier illustration files retain their original rights and byte content. These rings remain a metaphor for overlapping participation, not a quantitative chart or a timeline.
+
+
+## Additional private presentation materials
+
+- `private/sylacwa-stack-diary-12.jpeg`: @sylacwa, https://x.com/sylacwa/status/1557313306737754112/photo/1. Speaker-supplied 600 × 1200 JPEG, placed as one complete image with all four comic panels, title and signatures. No cropping, redrawing or image-byte modification. A general redistribution license is not established; excluded from public Git and used only in the speaker's private deck/PDF.
+- `private/ten-minutes-ten-years.png`: goal drawing supplied by the speaker. Original PNG bytes retained and displayed whole at its intrinsic aspect ratio. Its general redistribution rights are not established; excluded from public Git.
+
+These private images add to the two M5Stack product photographs already excluded above. Asset dimensions and hashes do not grant image redistribution rights.

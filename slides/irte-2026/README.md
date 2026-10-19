@@ -1,6 +1,6 @@
 # Growing Together · RTE 2026
 
-Growth-rings edition, October 19, 2026: 22 slides, 1,997 English spoken words plus the unchanged Chinese self-introduction. Based on the original v5 and the illustrated edition. The editable source uses `@minitype/minitype` 0.1.7. The growth-rings edition reorganizes the talk into five overlapping ways of taking part, within the original 22 slides. The English speaker notes and timing follow that structure. The Chinese self-introduction, its reading guide, existing photos, source links, illustration PNGs and dependency lockfile are retained.
+Approved revision: 22 slides, 1,616 English spoken words plus the unchanged Chinese self-introduction. The estimated budget is 17:46 at an elapsed English pace of 100 words/minute, including ordinary pauses, with 50 seconds for Chinese and 41 seconds of additional transitions and diagram viewing. This is a new-script estimate, not a measured rehearsal. Based on the original v5 and the illustrated edition. The editable source uses `@minitype/minitype` 0.1.7. The growth-rings edition reorganizes the talk into five overlapping ways of taking part, within the original 22 slides. The English speaker notes and timing follow that structure. The Chinese self-introduction, its reading guide, existing photos, source links, illustration PNGs and dependency lockfile are retained.
 
 ## Files
 
@@ -34,7 +34,7 @@ npm ci --prefix slides/irte-2026
 npm run build:irte-2026
 ```
 
-Open `output/RTE2026-Growing-Together-Rings-Artwork.pdf` in a PDF viewer. The build also writes `output/RTE2026-Growing-Together-Rings-Speaker-Script.txt`, `build/layout.json` and `build/diagnostics.json`. These generated directories, the font cache database and the fallback font copied from minitype are ignored by Git.
+Open `output/RTE2026-Growing-Together-Approved-Revision.pdf` in a PDF viewer. The build also writes `output/RTE2026-Growing-Together-Rings-Speaker-Script.txt`, `build/layout.json`, `build/diagnostics.json` and per-page `build/speaker-notes.json`. These generated directories, the font cache database and the fallback font copied from minitype are ignored by Git.
 
 The PDF is static, 16:9, 960 × 540 points, with no runtime network requirement. Generated PDFs remain outside Git, matching the repository’s build-output convention. The current PDF also embeds the two excluded M5Stack store images. The original source archive and delivered PDF remain separate from this public-repository source tree.
 
@@ -61,3 +61,14 @@ The generated `build/presentation-checks.json` records section pages, English wo
 ## Artwork fidelity correction
 
 The previous vector reconstruction had lost the original people, clothing, creative tools, yellow arcs and footsteps. The five replacement PNGs restore those elements in the approved visual language. `assets/growth-rings/PROMPTS.md` records the built-in ImageGen prompts; `image-credits.json` records AI provenance. `growth-rings.ts` now controls placement only. The 22-slide order, every `slides.json` field, Chinese self-introduction, speaker notes, source photos and original credit records are unchanged by this correction.
+
+
+## Approved story, participation and closing revision
+
+The kindergarten story now follows the speaker's account of a sea-creature exhibition, one paper-tube octopus, a second octopus, and the difference between complexity and attachment. The AI section identifies robo8080 as an existing M5Stack maker whose experiments expanded entrances for new participants. Rings describe ways to begin, rather than dates when members joined. The closing combines the future 10,000-person goal with a robot one can begin developing in ten minutes and keep making with for ten years, followed by a safe base for experiments and mistakes.
+
+Page 14 uses the speaker-approved concrete example: a photo motivates the next weekend's work, and hearing where someone got stuck identifies documentation to improve. Its 36-word passage takes approximately 22 seconds at 100 words/minute. Trademark language emphasizes keeping the shared name available; the growth account emphasizes observing activities and supporting what people do.
+
+Speaker notes mark READ ALOUD, END OF SPOKEN TEXT and REFERENCE ONLY — DO NOT READ ALOUD. Sources, credits, stage directions and the unchanged Chinese pronunciation guide are reference material. `build/speaker-notes.json` is the per-page text used in the existing native Google Slides deck. The 100-word/minute elapsed-pace assumption includes ordinary pauses; only additional viewing and transitions are added to it.
+
+Two further assets are private and ignored by Git: `assets/private/sylacwa-stack-diary-12.jpeg` (the full 600 × 1200 four-panel comic by @sylacwa) and `assets/private/ten-minutes-ten-years.png` (the speaker-provided goal drawing). Their original bytes and aspect ratios remain unchanged. All comic panels and both signatures are retained. Obtain the original private files before rebuilding a complete deck from a clean clone; provenance and hashes are recorded without publishing their image bytes. The two previously excluded M5Stack images also remain private.

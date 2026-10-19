@@ -329,5 +329,25 @@
     "modification": "Generated PNG preserved without cropping or redrawing; displayed at its original aspect ratio.",
     "width": 1254,
     "height": 1254
+  },
+  {
+    "file": "private/sylacwa-stack-diary-12.jpeg",
+    "caption": "Stack diary 12, full four-panel comic",
+    "source_page": "https://x.com/sylacwa/status/1557313306737754112/photo/1",
+    "credit": "@sylacwa",
+    "reuse": "Private presentation only; excluded from public Git. No general image redistribution license is established.",
+    "modification": "Original 600 × 1200 JPEG bytes unchanged; all panels and signatures retained; proportional placement without cropping.",
+    "width": 600,
+    "height": 1200
+  },
+  {
+    "file": "private/ten-minutes-ten-years.png",
+    "caption": "10 minutes to begin, 10 years to continue",
+    "source_page": "Speaker-provided goal illustration",
+    "credit": "Illustration supplied by the speaker",
+    "reuse": "Private presentation only; excluded from public Git. No general redistribution license is established.",
+    "modification": "Original PNG bytes unchanged; displayed whole at its intrinsic aspect ratio.",
+    "width": 1086,
+    "height": 1448
   }
 ]

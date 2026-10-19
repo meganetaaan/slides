@@ -8,3 +8,5 @@
 # Acquisition-site terms restrict copying without written permission.
 /assets/m5stack-basic-device.jpg
 /assets/m5stackchan-commercial.jpg
+# Speaker-supplied third-party comic and goal artwork: private deck only.
+/assets/private/

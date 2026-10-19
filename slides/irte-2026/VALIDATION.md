@@ -63,3 +63,17 @@ The illustrated edition adds AI-generated artwork to text-only pages and adjusts
 - A comparison image includes the unchanged approved reference, previous and corrected page 13, and all five restored artwork assets. It is a document composition, not a program-drawn replacement for the artwork.
 - The two M5Stack product images remain untracked; no PDF or review screenshot is included in Git.
 - Corrected user-only PDF: 22,490,251 bytes, SHA-256 `6d9a49107eb2542d492a3949faa2edea1d1233fe487dcf20b52ea9833a51d960`.
+
+## Approved narrative and rehearsal revision
+
+- Started from clean `4bfdcdb8a8edc5b26f4df31ed54dc80d901581ed`. The native Google Slides deck had 22 pages and no intervening content changes.
+- Revised the approved kindergarten exhibition account, complexity and attachment, robo8080's earlier participation and the meaning of expanding entrances. The AI/ready-made-robot section stays on pages 18–19.
+- Page 14 now uses the concrete photo/next-weekend/documentation example: 36 English words, approximately 22 seconds at 100 words/minute. Trademark language affirms shared availability; the growth account describes observing and supporting activities. Uncertain ASR readings were not added as presentation facts.
+- Page 13 retains the complete 600 × 1200 comic, all four panels, title and both signatures, with @sylacwa and the exact source post. Page 21 places the entire supplied goal PNG without cropping, redrawing or changing its original bytes.
+- Added private images are excluded from Git, alongside the two existing excluded M5Stack photographs. All previous image bytes, hashes and credit records are unchanged.
+- Only visible pages 6, 7, 13, 14, 18, 21 and 22 change in PDF text comparison. The 22-page order and all native slide/image-object IDs are retained. Chinese speech, pinyin, Japanese meanings, pronunciation advice and the English transition are unchanged; the intro allowance is 58 seconds including its transition.
+- Build diagnostics: empty array. Native-slide issue checker: 0 findings. All 22 native notes match `build/speaker-notes.json`, including source links. READ ALOUD labels, a red END OF SPOKEN TEXT boundary, and gray reference material separate speech from guidance and citations.
+- Exported and rendered all 22 completed native slides for visual inspection. Checked text/image placement, source photos, the full comic, goal drawing and current-position markers. Native sharing remains owner-only; the existing Drive folder is unchanged.
+- English spoken words, including the post-intro transition: **1,616**. At **100 words/minute elapsed pace**, including ordinary pauses, English takes approximately **16:10**. Add **0:50** Chinese, **0:05** opening and **0:41** additional slide/diagram viewing: **17:46** estimated total, **2:14** margin to 20:00. This new script has not been timed in a live rehearsal.
+- High-quality local PDF: 22,151,448 bytes; SHA-256 `8edbe99abcd880f6d2c15a3584678f42c180e90b936f5b5a501189195be983f7`.
+- Lightweight local PDF: 1,618,200 bytes; SHA-256 `fbed9bc74c8278654d37a36d9bca8edf886d1901b55b5797040c4caecda335fb`. Compression preserves all 22 pages and extracted text after whitespace normalization. Visually inspected the compressed comic and goal pages. Earlier high-quality editions are retained separately.
