@@ -68,7 +68,7 @@ function illustrated(s:Slide):Flow[]{
   ];
   if(!['statement','words','rules','future'].includes(s.layout)) throw Error(`Unsupported illustrated layout: ${s.id} (${s.layout})`);
   const flows=[...header(s),
-    ...(s.lines||[]).map((line,n)=>text(line,19,81+n*34,118,s.id==='discord'&&n===0?40:26,{bold:s.layout==='words'||s.layout==='rules'||n===0,color:s.id==='discord'&&n===0?'accent':'ink'})),
+    ...(s.lines||[]).map((line,n)=>text(line,19,81+n*34,s.id==='trademark'?125:118,s.id==='discord'&&n===0?40:26,{bold:s.layout==='words'||s.layout==='rules'||n===0,color:s.id==='discord'&&n===0?'accent':'ink'})),
     picture(s.illustration!,142,60,178,102)
   ];
   if(s.layout==='future') flows.push(text(s.label||'A direction to explore',19,159,118,15,{color:'accent'}));
@@ -100,6 +100,7 @@ function page(s:Slide,i:number):Group{
     b=[...header(s),text(s.side||'',18,88,118,26),picture(s.image!,144,61,176,100)];
   }else if(s.layout==='birth'){
     b=[text('The birth of\nStack-chan',18,25,118,42,{bold:true}),text(s.zh,18,73,118,23,{zh:true,color:'accent'}),text(s.side||'',18,99,118,20,{bold:true}),text('A battery inside.\nA robot on my palm.',18,116,118,21),text('Original post on X',18,154,120,17,{color:'accent',href:'https://x.com/meganetaaan/status/1410631124045291521'}),picture(s.image!,142,21,178,141)];
+    if(s.label) b.push(text(s.label,18,137,118,15,{color:'muted'}));
   }else if(s.layout==='portrait'){
     b=[text(s.title,18,30,190,44,{bold:true}),text(s.zh,18,59,185,23,{zh:true,color:'accent'}),text(s.side||'',18,104,180,27),picture(s.image!,212,23,108,140)];
   }else if(s.layout==='statement'){
@@ -141,12 +142,16 @@ const scriptEmphasis:EmphasisSpan[]=[];
 const time=(s:number)=>`${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
 const englishWordCount=slides.filter(s=>s.id!=='selfintro'&&s.id!=='cover').reduce((n,s)=>n+s.notes.split(/\s+/).length,0)+(slides.find(s=>s.id==='selfintro')?.englishTransition?.split(/\s+/).length||0);
 const totalSeconds=slides.reduce((sum,s)=>sum+s.duration,0);
-const assumedWordsPerMinute=100; // Rehearsal-based elapsed pace, including ordinary pauses.
+const assumedWordsPerMinute=100; // Conservative elapsed pace, including ordinary pauses.
 const chineseSeconds=50;
 const speechSeconds=englishWordCount/assumedWordsPerMinute*60;
 const pauseSeconds=totalSeconds-chineseSeconds-5-speechSeconds;
+const recordingReference={seconds:1001.895,englishWords:1616,endingSegmentWords:171,endingSegmentSeconds:90,approximateEndingWordsPerMinute:115};
+const netEnglishWords=englishWordCount-recordingReference.englishWords;
+const recordingProjection={minimumSeconds:recordingReference.seconds+netEnglishWords/115*60,maximumSeconds:recordingReference.seconds+netEnglishWords/100*60};
 if(slides.length!==22||totalSeconds>1200||pauseSeconds<0) throw Error('Presentation exceeds the 20-minute planning budget');
-let script='GROWING TOGETHER\nStack-chan and Its Open-Source Community\nShinya Ishikawa\nRTE 2026 · Growth Rings edition · October 19, 2026\n\nREHEARSAL GUIDE\n'+slides.length+' slides in five sections. Planning budget: '+time(totalSeconds)+' plus '+time(1200-totalSeconds)+' margin before 20:00. Approximately '+englishWordCount+' English spoken words, plus the unchanged Chinese introduction. At a rehearsal-based elapsed pace of 100 English words per minute (including ordinary pauses), allow about '+time(Math.round(speechSeconds))+' for English, 0:50 for Chinese, 0:05 for the opening, and '+time(Math.round(pauseSeconds))+' for additional slide transitions and diagram viewing. The self-introduction slide has a 0:58 total budget, including its English transition. This new-script budget is an estimate, not a measured delivery time. Rehearse aloud and adjust pauses. Read only the sections marked READ ALOUD. Everything after END OF SPOKEN TEXT is reference material and must not be read aloud. The rings show overlapping ways to take part, not population, maturity or a verified timeline. Only the outer future ring is dotted. The PDF is static and needs no network, simulator or live demonstration. Only the self-introduction is spoken in Chinese; the main talk is in English.\n\n';
+const recordingGuide='Previous-script recording reference: 16:41.895. The final 90-second segment contained approximately 171 words (about 115 words/minute including pauses); this is not a measured whole-talk rate. Net English change: '+netEnglishWords+' words. Adding the new material at 100–115 words/minute to that recording gives approximately '+time(Math.round(recordingProjection.minimumSeconds))+'–'+time(Math.round(recordingProjection.maximumSeconds))+'. This is a projection, not a completed rehearsal of the revised script. The conservative schedule below still uses 100 elapsed English words/minute plus additional viewing time.\n\n';
+let script='GROWING TOGETHER\nStack-chan and Its Open-Source Community\nShinya Ishikawa\nRTE 2026 · Growth Rings edition · October 19, 2026\n\nREHEARSAL GUIDE\n'+recordingGuide+slides.length+' slides in five sections. Planning budget: '+time(totalSeconds)+' plus '+time(1200-totalSeconds)+' margin before 20:00. Approximately '+englishWordCount+' English spoken words, plus the unchanged Chinese introduction. At a conservative elapsed pace of 100 English words per minute (including ordinary pauses), allow about '+time(Math.round(speechSeconds))+' for English, 0:50 for Chinese, 0:05 for the opening, and '+time(Math.round(pauseSeconds))+' for additional slide transitions and diagram viewing. The self-introduction slide has a 0:58 total budget, including its English transition. This new-script budget is an estimate, not a measured delivery time. Rehearse aloud and adjust pauses. Read only the sections marked READ ALOUD. Everything after END OF SPOKEN TEXT is reference material and must not be read aloud. The rings show overlapping ways to take part, not population, maturity or a verified timeline. Only the outer future ring is dotted. The PDF is static and needs no network, simulator or live demonstration. Only the self-introduction is spoken in Chinese; the main talk is in English.\n\n';
 slides.forEach((s,i)=>{
  const noteStart=script.length;
  const start=seconds;seconds+=s.duration;
@@ -179,5 +184,5 @@ slides.forEach((s,i)=>{
 await fs.writeFile('output/RTE2026-Growing-Together-Rings-Speaker-Script.txt',script);
 await fs.writeFile('output/Speaker-Script-Emphasis.md',emphasizeMarkdown(script,scriptEmphasis));
 await fs.writeFile('build/speaker-notes.json',JSON.stringify(speakerNotes,null,2));
-await fs.writeFile('build/presentation-checks.json',JSON.stringify({pages:count,sections:sections.map((section,index)=>({...section,pages:slides.flatMap((s,i)=>s.section===index+1?[i+1]:[])})),englishWordCount,totalSeconds,marginSeconds:1200-totalSeconds,assumedEnglishWordsPerMinute:assumedWordsPerMinute,paceIncludesOrdinaryPauses:true,englishElapsedSeconds:speechSeconds,chineseSeconds,openingSeconds:5,additionalViewingSeconds:pauseSeconds},null,2));
+await fs.writeFile('build/presentation-checks.json',JSON.stringify({pages:count,sections:sections.map((section,index)=>({...section,pages:slides.flatMap((s,i)=>s.section===index+1?[i+1]:[])})),englishWordCount,totalSeconds,marginSeconds:1200-totalSeconds,assumedEnglishWordsPerMinute:assumedWordsPerMinute,paceIncludesOrdinaryPauses:true,englishElapsedSeconds:speechSeconds,chineseSeconds,openingSeconds:5,additionalViewingSeconds:pauseSeconds,netEnglishWords,recordingReference,recordingProjection},null,2));
 console.log(`Created ${count} pages. Planned duration ${time(seconds)}. English words ${englishWordCount}. Script written.`);

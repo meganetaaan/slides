@@ -1,6 +1,8 @@
 # Growing Together · RTE 2026
 
-Approved revision: 22 slides, 1,616 English spoken words plus the unchanged Chinese self-introduction. The estimated budget is 17:46 at an elapsed English pace of 100 words/minute, including ordinary pauses, with 50 seconds for Chinese and 41 seconds of additional transitions and diagram viewing. This is a new-script estimate, not a measured rehearsal. Based on the original v5 and the illustrated edition. The editable source uses `@minitype/minitype` 0.1.7. The growth-rings edition reorganizes the talk into five overlapping ways of taking part, within the original 22 slides. The English speaker notes and timing follow that structure. The Chinese self-introduction, its reading guide, existing photos, source links, illustration PNGs and dependency lockfile are retained.
+Current approved revision: 22 slides, 1,721 English spoken words (+105 from the previous script), plus the unchanged Chinese self-introduction. The previous-script recording was 16:41.895. Adding 105 words at 100–115 words/minute projects approximately 17:37–17:45; the approximately 115 words/minute figure describes only its final 90-second segment, not a measured whole-talk rate. The revised script has not been timed in a new rehearsal. A separate conservative schedule at 100 elapsed English words/minute, with Chinese, opening and additional viewing time, totals 18:50 with 1:10 to spare before 20:00.
+
+Based on the original v5 and the illustrated edition. The editable source uses `@minitype/minitype` 0.1.7. The growth-rings edition organizes the talk into five overlapping ways of taking part within the original 22 slides. Chinese introduction and pronunciation guidance, existing photos, source links, artwork PNGs and the dependency lockfile are retained.
 
 ## Files
 
@@ -54,7 +56,7 @@ The five sections are A Personal Project (3–7), Other Makers (8–12), More Wa
 
 `growth-rings.ts` places the five hand-drawn artwork PNGs under `assets/growth-rings/` at a uniform aspect ratio. The former geometric reconstruction has been removed. The smiling robot, people, electronics, pencil, scarf, comic page, open-box robot, chat laptop, yellow arcs and future footsteps follow the approved visual reference. Only the future outside circumference is dotted; earlier layers remain visible in gray. Radii do not encode population, dates, maturity or a causal sequence. The design follows the user-approved visual mockup. Five standalone assets were recreated with built-in ImageGen using that mockup as a reference, rather than pasting a screenshot of the whole mockup into a slide. Their original generated pixels and the prompts are retained. They are not claimed to be exact pixel crops of the reference. Existing illustrations remain unmodified and proportionally scaled.
 
-The trademark is introduced in the early kit-development context, before the later derivative-work guidelines. No exact date or verified ordering relative to Takao’s kits is asserted. The later guidelines and Discord share one content page. Chapter-ending bridges and the closing invitation are included in the speaker notes.
+The trademark is introduced as the original creator’s intent to keep a shared name open to individual makers and companies across hardware, including M5Stack, before the later derivative-work guidelines. This describes intent, not a legal guarantee. No exact date or verified ordering relative to Takao’s kits is asserted. The later guidelines and Discord share one content page. Chapter-ending bridges and the closing invitation are included in the speaker notes.
 
 The generated `build/presentation-checks.json` records section pages, English word count, the assumed speaking rate, Chinese allowance, pauses and total planning budget. These estimates are not measured rehearsal times. The private working PDF retains the two supplied M5Stack store images; they remain excluded from the public repository.
 
@@ -87,3 +89,10 @@ npm run build:speaker-script-pdf
 ```
 
 `output/RTE2026-Speaker-Script-Emphasis.pdf` contains all 22 slide sections, rehearsal guidance, the full Chinese reading guide and source notes across 24 A4 pages. English speech uses 16-point regular and bold Noto Sans; non-spoken material is smaller and gray. The PDF uses the installed PDFKit dependency and existing bundled fonts. Generated PDFs remain ignored by Git.
+
+
+## Name, participation and the creator’s changing role
+
+The latest approved additions explain M5Stack + the affectionate Japanese suffix “chan,” a community where people can be both developers and users, the bridge into the kindergarten memory, the shared-name intent, and how the creator’s responsibilities changed with the community. They replace redundant wording where possible. Spoken changes are limited to pages 3, 5, 6, 11 and 20; visible text changes are on pages 3, 5, 11 and 20. All 22 pages, pictures and hand-drawn ring artwork remain. Sentence-stress selections now contain 112 exact spans.
+
+The complete Chinese introduction and pronunciation guide are unchanged. No TTS engine, generated audio, credential or private review-session files are part of this repository. Local first-reader sessions are ignored under `.first-reader/`; the review is a separate deliverable.

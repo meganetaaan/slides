@@ -63,14 +63,15 @@
     "layout": "words",
     "lines": [
       "A companion can die",
-      "when its service ends"
+      "Everyone can develop and use"
     ],
     "credit": "Source: Hackaday.io · Stack-chan project",
-    "duration": 64,
-    "notes": "A communication robot can become a companion. When its proprietary service ends, that companion can die while its body is still beside you. A closed design makes it harder for owners to keep it working. I wanted people to repair their robots, replace services, and keep them running. Open source offers more ways to continue, although a robot's future still needs people's care. This story begins with my own making. The circles show entrances expanding, with personal making at the center. They describe overlapping activities rather than when each person joined. First, I had to learn to build a robot.",
+    "duration": 73,
+    "notes": "A communication robot can become a companion. When its proprietary service ends, that companion can die while its body is still beside you. A closed design makes it harder for owners to keep it working. I wanted people to repair their robots, replace services, and keep them running. I wanted a community where everyone could be both a developer and a user, rather than one company making things for everyone else. That future still needs people's care. This story begins with my own making. The circles show entrances expanding, with personal making at the center. They describe overlapping activities rather than when each person joined. First, I had to learn to build a robot.",
     "sources": [
       "https://hackaday.io/project/181344-stack-chan-javascript-driven-super-kawaii-robot",
-      "Speaker's account, October 11, 2026"
+      "Speaker's account, October 11, 2026",
+      "Speaker's approved additions, October 2026"
     ],
     "illustration": "illustrations/service-and-repair.png",
     "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)",
@@ -102,15 +103,17 @@
     "image": "stackchan-birth-tweet-card.jpg",
     "side": "July 2021",
     "credit": "Shinya Ishikawa / @meganetaaan · Original post, July 2021",
-    "duration": 39,
-    "notes": "This is the tweet where I shared Stack-chan in my hand. With a battery inside, it could move without a power cable. I wrote that it had become a real robot I could hold on my palm. The first version was rough, but that small face now had a moving body. This was before I knew what other people would make with it.",
+    "duration": 46,
+    "notes": "This is the tweet where I shared Stack-chan in my hand. The name Stack-chan combines M5Stack with “chan,” an affectionate Japanese suffix. With a battery inside, it could move without a power cable. I wrote that it had become a real robot I could hold on my palm. The first version was rough, but that small face now had a moving body. This was before I knew what other people would make with it.",
     "sources": [
       "https://x.com/meganetaaan/status/1410631124045291521",
       "https://rt-net.jp/humanoid/archives/4533",
       "https://findy-code.io/media/articles/codesidechat-meganetaaan",
-      "Speaker's account, October 11, 2026"
+      "Speaker's account, October 11, 2026",
+      "Speaker's approved additions, October 2026"
     ],
-    "section": 1
+    "section": 1,
+    "label": "M5Stack + chan\nan affectionate suffix"
   },
   {
     "id": "nonverbal",
@@ -121,10 +124,11 @@
       "Simple can still\nbe precious",
       "Complexity and\nattachment differ"
     ],
-    "duration": 71,
-    "notes": "In kindergarten, we made things for an exhibition about sea creatures. Other children used lots of boxes and paper. I made an octopus from one paper tube. My teacher asked me to make something more elaborate, so I made a second octopus. The teacher still wasn't satisfied, and I felt sad. But I was attached to my simple octopus. That memory stays with me when I think about making robots. Complexity and attachment are different things. A simple creation can mean a lot to its maker. I want people to be able to show what they made with pride, even when it is small or unfinished. That feeling is part of why I made Stack-chan simple.",
+    "duration": 81,
+    "notes": "To explain why simple creations matter so much to me, let me share a small memory from kindergarten. We made things for an exhibition about sea creatures. Other children used lots of boxes and paper. I made an octopus from one paper tube. My teacher asked me to make something more elaborate, so I made a second octopus. The teacher still wasn't satisfied, and I felt sad. But I was attached to my simple octopus. That memory stays with me when I think about making robots. Complexity and attachment are different things. A simple creation can mean a lot to its maker. I want people to be able to show what they made with pride, even when it is small or unfinished. That feeling is part of why I made Stack-chan simple.",
     "sources": [
-      "Speaker's clarification, October 2026"
+      "Speaker's clarification, October 2026",
+      "Speaker's approved additions, October 2026"
     ],
     "illustration": "illustrations/paper-tube-octopus.png",
     "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)",
@@ -205,13 +209,14 @@
     "layout": "rules",
     "lines": [
       "A defensive trademark",
-      "A shared name for independent makers"
+      "A shared name for makers and companies"
     ],
-    "duration": 45,
-    "notes": "The name's history goes back to kit development at my former employer. Someone suggested a defensive trademark to keep the name available for shared use. I wanted individuals and companies to use Stack-chan as a shared character and name, free of charge under the published guidelines. The trademark came before the derivative-work guidelines. Code licenses and the shared name each have their own rules. Both help independent makers create their own versions.",
+    "duration": 51,
+    "notes": "Registering a trademark might sound like a bit much for a personal hobby. But the name had become something we shared. For me, holding it as the original creator mattered: I wanted the name to stay open to people using different hardware, including M5Stack's, rather than become the product name of one manufacturer. My aim was to make room for both individual makers and companies. The trademark came before the derivative-work guidelines. Code licenses and the shared name each have their own rules.",
     "sources": [
       "https://github.com/stack-chan/stack-chan/blob/main/GUIDELINE_ja.md",
-      "Speaker's account, October 11, 2026"
+      "Speaker's account, October 11, 2026",
+      "Speaker's approved additions, October 2026"
     ],
     "illustration": "illustrations/shared-guidelines.png",
     "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)",
@@ -364,17 +369,18 @@
   },
   {
     "id": "future",
-    "title": "My next experiment",
-    "zh": "我想尝试的下一步",
+    "title": "Growing with the community",
+    "zh": "与社区一起成长",
     "layout": "future",
     "lines": [
       "Several robots talking together",
       "A person can listen, then join"
     ],
-    "duration": 56,
-    "notes": "The dotted outside circle is open for what comes next. The earlier ways, including my own making at the center, stay with it. I want to try several Stack-chans talking together, with a person listening and joining when something interests them. Which robot speaks next? Where does it look? How does it notice someone wants to join? Blinking, gaze, small movements, and pauses still matter, even with two motors. This is an experiment I want to explore, rather than a finished system I am showing today.",
+    "duration": 88,
+    "notes": "The dotted outside circle is open for what comes next. The earlier ways, including my own making at the center, stay with it. As the community grew, my role changed too. At different stages, we needed manuals, a trademark, guidelines, tools for communication, and even business cards. I tried to respond to the community's needs as they emerged, and each stage taught me something new. The members grew, the community grew, and I grew with them. I want to try several Stack-chans talking together, with a person listening and joining when something interests them. Which robot speaks next? Where does it look? How does it notice someone wants to join? Blinking, gaze, small movements, and pauses still matter, even with two motors. This is an experiment I want to explore, rather than a finished system I am showing today.",
     "sources": [
-      "Speaker's account, October 2026"
+      "Speaker's account, October 2026",
+      "Speaker's approved additions, October 2026"
     ],
     "illustration": "illustrations/group-conversation.png",
     "illustrationCredit": "Illustration: AI-generated (OpenAI ImageGen)",
