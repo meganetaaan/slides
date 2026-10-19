@@ -7,6 +7,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node --import tsx build.ts"
+    "build": "node --import tsx build.ts",
+    "build:speaker-script-pdf": "node build-speaker-script-pdf.cjs"
   }
 }

@@ -1,0 +1,386 @@
+GROWING TOGETHER
+Stack-chan and Its Open-Source Community
+Shinya Ishikawa
+RTE 2026 · Growth Rings edition · October 19, 2026
+
+REHEARSAL GUIDE
+22 slides in five sections. Planning budget: 17:46 plus 2:14 margin before 20:00. Approximately 1616 English spoken words, plus the unchanged Chinese introduction. At a rehearsal-based elapsed pace of 100 English words per minute (including ordinary pauses), allow about 16:10 for English, 0:50 for Chinese, 0:05 for the opening, and 0:41 for additional slide transitions and diagram viewing. The self-introduction slide has a 0:58 total budget, including its English transition. This new-script budget is an estimate, not a measured delivery time. Rehearse aloud and adjust pauses. Read only the sections marked READ ALOUD. Everything after END OF SPOKEN TEXT is reference material and must not be read aloud. The rings show overlapping ways to take part, not population, maturity or a verified timeline. Only the outer future ring is dotted. The PDF is static and needs no network, simulator or live demonstration. Only the self-introduction is spoken in Chinese; the main talk is in English.
+
+01  Growing Together
+一起成长
+Target 0:00–0:05
+
+[STAGE DIRECTION — DO NOT READ ALOUD]
+[Show the title, then advance to slide 2 for the Chinese self-introduction.]
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+Shinya Ishikawa / Stack-chan community
+https://github.com/stack-chan/stack-chan
+Speaker's account, October 11, 2026
+
+02  Hello, Beijing
+大家好！
+Target 0:05–1:03
+
+[READ ALOUD — CHINESE]
+大家好！
+我叫 Shinya Ishikawa，来自日本。
+我是 Stack-chan 的创作者，也是社区的代表。
+很高兴今天能在北京和大家见面。
+接下来，我会用英语介绍 Stack-chan 和我们的开源社区。
+
+[READ ALOUD — ENGLISH TRANSITION]
+Let me begin with **why** I wanted to make this robot **open source**.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+中国語の自己紹介（約45秒の練習枠）
+各行は「中国語 → 声調付きピンイン → 日本語訳」の順です。本番で読むのは中国語だけです。
+
+名前は名刺どおり Shinya Ishikawa と表記しています。名刺に漢字の氏名はないため、漢字名や中国語読みは補っていません。名前は普段の日本語の発音で、Stack-chan は「スタックチャン」と読んでください。角括弧の部分はピンインではありません。
+
+1. 大家好！
+Dàjiā hǎo!
+皆さん、こんにちは！
+
+2. 我叫 Shinya Ishikawa，来自日本。
+Wǒ jiào [Shinya Ishikawa], láizì Rìběn.
+Shinya Ishikawaです。日本から来ました。
+
+3. 我是 Stack-chan 的创作者，也是社区的代表。
+Wǒ shì [Stack-chan] de chuàngzuòzhě, yě shì shèqū de dàibiǎo.
+Stack-chanの作者で、コミュニティの代表でもあります。
+
+4. 很高兴今天能在北京和大家见面。
+Hěn gāoxìng jīntiān néng zài Běijīng hé dàjiā jiànmiàn.
+今日、北京で皆さんにお会いできてうれしいです。
+
+5. 接下来，我会用英语介绍 Stack-chan 和我们的开源社区。
+Jiē xiàlái, wǒ huì yòng Yīngyǔ jièshào [Stack-chan] hé wǒmen de kāiyuán shèqū.
+ここからは英語で、Stack-chanと私たちのオープンソース・コミュニティを紹介します。
+
+発音メモ（読み上げない）
+ピンインの母音の上の記号は声調です。第1声 ā は高く平ら、第2声 á は上がる、第3声 ǎ は低く沈む、第4声 à は短く下がります。記号のない de は軽く短く発音します。カタカナでは音と声調を十分に表せないので、ピンインを基本に練習してください。句点でひと呼吸置き、名前と Stack-chan はいつもの発音で大丈夫です。
+
+Sources and image credits — DO NOT READ ALOUD
+User-provided self-introduction business-card image, October 11, 2026
+Speaker's account, October 2026
+
+SECTION 1  A Personal Project
+
+03  When a companion's service ends
+当陪伴机器人的服务停止时
+Target 1:03–2:07
+
+[READ ALOUD — ENGLISH]
+A communication robot can become **a companion**. When its proprietary **service ends**, that companion **can die** while its body is still beside you. A closed design makes it harder for owners to keep it working. I wanted people to repair their robots, replace services, and **keep them running**. Open source offers more ways to continue, although a robot's future still needs people's care. This story begins with my own making. The circles show **entrances expanding**, with personal making at the center. They describe **overlapping activities** rather than when each person joined. First, I had to learn to build a robot.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+Source: Hackaday.io · Stack-chan project
+https://hackaday.io/project/181344-stack-chan-javascript-driven-super-kawaii-robot
+Speaker's account, October 11, 2026
+
+04  Learning to build a robot
+学习亲手制作机器人
+Target 2:07–2:50
+
+[READ ALOUD — ENGLISH]
+Around 2018, I shared face-animation software for M5Stack. I wanted to give that small face **a moving body**. After joining a robotics startup, I learned mechanical design, circuits, and embedded software. I tried those skills in **my spare time** and gradually built my own robot. JavaScript was familiar, so the Moddable SDK helped me approach embedded development through **a language I knew**. This personal project grew **while I was learning**.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+Shinya Ishikawa / m5stack-avatar contributors
+https://github.com/stack-chan/m5stack-avatar
+https://findy-code.io/media/articles/codesidechat-meganetaaan
+Speaker's account, October 11, 2026
+
+05  The birth of Stack-chan
+Stack-chan 的诞生
+Target 2:50–3:29
+
+[READ ALOUD — ENGLISH]
+This is the tweet where I shared Stack-chan in my hand. With **a battery inside**, it could move without a power cable. I wrote that it had become **a real robot** I could hold on my palm. The first version was **rough**, but that small face now had a moving body. This was before I knew what **other people** would make with it.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+Shinya Ishikawa / @meganetaaan · Original post, July 2021
+https://x.com/meganetaaan/status/1410631124045291521
+https://rt-net.jp/humanoid/archives/4533
+https://findy-code.io/media/articles/codesidechat-meganetaaan
+Speaker's account, October 11, 2026
+
+06  A paper-tube octopus
+一只纸筒章鱼
+Target 3:29–4:40
+
+[READ ALOUD — ENGLISH]
+In kindergarten, we made things for an exhibition about sea creatures. Other children used lots of boxes and paper. I made an octopus from **one paper tube**. My teacher asked me to make something **more elaborate**, so I made **a second octopus**. The teacher **still wasn't satisfied**, and I felt **sad**. But I was **attached** to my simple octopus. That memory stays with me when I think about making robots. Complexity and attachment are **different things**. A simple creation can mean a lot to its maker. I want people to be able to show what they made **with pride**, even when it is small or unfinished. That feeling is part of why I made Stack-chan simple.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+Speaker's clarification, October 2026
+
+07  Two motors and a simple face
+两个电机，一张简单的脸
+Target 4:40–5:34
+
+[READ ALOUD — ENGLISH]
+I **don't want** robot making to be a privilege **reserved for experts**. Connect **two motors** to a microcontroller, give it a simple face, and you already have a robot. A small movement can make that face feel alive. It doesn't have to be complicated to become something you **care about**. More advanced experiments are welcome, and the two-motor version can remain **a starting point**. People can learn by building and changing it, with help where they need it. Then other makers began adapting it to their own needs.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+https://github.com/stack-chan/stack-chan
+Speaker's account, October 11, 2026
+https://findy-code.io/media/articles/codesidechat-meganetaaan
+
+SECTION 2  Other Makers
+
+08  An existing maker community
+从已有的创客社区出发
+Target 5:34–6:24
+
+[READ ALOUD — ENGLISH]
+The next circle adds other makers, while personal projects remain inside. I **already belonged** to a maker community around M5Stack, a compact module with a screen. Makers shared projects and advice, and distributors such as Switch Science helped make the hardware available. I learned from their work. Some became Stack-chan's **first builders**. The rough first version took effort to assemble. Sharing the design was a start; **people willing to try it** and help made it **useful**.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+M5Stack
+https://slides.com/meganetaaan/m5stack
+https://shop.m5stack.com/products/esp32-basic-core-iot-development-kit-v2-6
+
+09  A case for a different motor
+为不同的电机改造外壳
+Target 6:24–6:59
+
+[READ ALOUD — ENGLISH]
+An early contribution came from tomorrow56, who had **a different motor** available. They modified the case to fit an SG-90 servo, used **the parts they had**, and **shared the result**. Participation began with one person's circumstances: a part they already owned and a change they wanted to make. Their version gave the next builder **another option**.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+tomorrow56 / Shinya Ishikawa, Hackaday.io
+https://hackaday.io/project/181344-stack-chan-javascript-driven-super-kawaii-robot/log/199976-from-the-community-4-diyed-sg-90-stack-chan
+
+10  Other boards are welcome
+欢迎使用其他开发板
+Target 6:59–7:38
+
+[READ ALOUD — ENGLISH]
+I welcomed **other boards** from an early stage: Arduino, obniz, and other ARM-based boards. M5Stack was **my starting point**, while other people brought tools and knowledge they already liked. The photograph shows the variety at a maker event. These versions came from **their experiments**, beyond anything I had planned. Different hardware could belong to **the same project**. Sharing a name raised another question.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+Stack-chan community, Maker Faire Shenzhen
+https://github.com/stack-chan
+Speaker's account, October 11, 2026
+
+11  Keeping the shared name available
+让共同的名字持续可用
+Target 7:38–8:23
+
+[READ ALOUD — ENGLISH]
+The name's history goes back to kit development at my former employer. Someone suggested a **defensive trademark** to keep the name **available for shared use**. I wanted individuals and companies to use Stack-chan as a shared character and name, **free of charge** under the published guidelines. The trademark came **before** the derivative-work guidelines. Code licenses and the shared name each have **their own rules**. Both help **independent makers** create their own versions.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+https://github.com/stack-chan/stack-chan/blob/main/GUIDELINE_ja.md
+Speaker's account, October 11, 2026
+
+12  Takao's kits
+让更多人动手组装
+Target 8:23–9:08
+
+[READ ALOUD — ENGLISH]
+Takao prepared and **distributed kits** and organized gatherings where people worked on their robots **together**. Delivering kits reliably and helping with assembly take **sustained effort**. A kit made assembly easier; a gathering offered somewhere to **ask for help**. He provided support I could never have delivered **alone**. Personal projects and hardware adaptations continued alongside it. I was learning from what other people contributed. Some people took part in ways I had never expected.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+Takao / M5Stack maker blog
+https://raspberrypi.mongonta.com/how-to-make-stackchan-m5gobottom/
+Speaker's account, October 11, 2026
+
+SECTION 3  More Ways to Create
+
+13  Many kinds of making
+各种各样的创作方式
+Target 9:08–10:12
+
+[READ ALOUD — ENGLISH]
+This circle adds **more ways to create**; the earlier ways are still here. This is Stack-san, **a wearable creation** by Latte. Its scale and the way it meets people are very different from my desk robot. Beside it is **a four-panel comic** by sylacwa. Other people make outfits or tell stories about their Stack-chans. I hadn't anticipated these forms of participation. On Twitter, I noticed people whose interests were different from the engineering circles I knew. They were enjoying the same character through **their own kinds of making**. Engineering remained important, with more ways to take part **alongside it**.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+Latte / ProtoPedia · Comic: @sylacwa — x.com/sylacwa/status/1557313306737754112/photo/1
+https://protopedia.net/prototype/4058
+Speaker's account, October 11, 2026
+https://x.com/sylacwa/status/1557313306737754112/photo/1
+
+14  Your feedback keeps me making
+你的反馈让我继续创作
+Target 10:12–10:35
+
+[READ ALOUD — ENGLISH]
+When someone shares **a photo** of their Stack-chan, I want to work on it again the **next weekend**. When they tell me where they **got stuck**, I know which **documentation** to improve. That keeps me making.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+https://findy-code.io/media/articles/codesidechat-meganetaaan
+
+15  Guidelines and a place to ask
+创作指南与交流的空间
+Target 10:35–11:24
+
+[READ ALOUD — ENGLISH]
+The derivative-work guidelines came later, to support **free use** and reduce uncertainty. The code, name, and other people's photographs each have their own rules. People also need somewhere to ask practical questions. On Discord, they can show **work in progress** and discuss a motor, an expression, or an outfit. They may meet someone who has tried something similar. I support that space by watching what people are doing and **helping them continue**. The community's activities **guide what I do next**.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+https://github.com/stack-chan/stack-chan/blob/main/GUIDELINE_ja.md
+Speaker's account, October 11, 2026
+https://github.com/stack-chan
+Speaker's account, October 2026
+
+16  A role you can name yourself
+自己定义在社区中的角色
+Target 11:24–12:05
+
+[READ ALOUD — ENGLISH]
+I made a business-card editor that **anyone can use**. People can **name their own way** of taking part and introduce the role they want in the community. The card makes that **self-introduction** visible when people meet. It can start a conversation about what someone likes making. I want people to have that **freedom to name their role**, alongside the freedom to change the hardware or software.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+Shinya Ishikawa / Stack-chan community
+https://stack-chan.github.io/card/
+Speaker's account, October 2026
+
+17  A robot's birthday party
+机器人的生日会
+Target 12:05–12:47
+
+[READ ALOUD — ENGLISH]
+At a birthday party, these different activities meet. People bring robots, outfits, and stories about their attempts. A **technical achievement** and **a first attempt** can both be worth sharing. They meet people they may later ask for help, or help themselves. I discover work that happened **without me**. The relationships and knowledge people share give them more ways to continue. Long-standing makers also opened **new entrances** through AI.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+Stack-chan community
+https://github.com/stack-chan
+Speaker's account, October 11, 2026
+
+SECTION 4  New Ways In
+
+18  AI Stack-chan
+社区带来了 AI 对话
+Target 12:47–13:55
+
+[READ ALOUD — ENGLISH]
+This circle shows **new entrances**, **not a new generation** of members. robo8080 was **already part** of the M5Stack community and was exploring AI **in 2022**. **Later**, he connected Stack-chan to an LLM and created AI Stack-chan. Other people shared tutorials and further integrations. **An experienced member's experiments** opened an entrance for people who had never built a robot. They could start with an interest in AI and meet a physical robot they could change. Personal making, hardware adaptations, and creative expression continued alongside it. The circles describe **wider possibilities**, rather than the order in which these people joined. A ready-made product offers another way to begin.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+robo8080 / ProtoPedia, CC BY 4.0
+https://protopedia.net/prototype/4052
+https://creativecommons.org/licenses/by/4.0/
+Speaker's account, October 11, 2026
+https://findy-code.io/media/articles/codesidechat-meganetaaan
+Speaker's clarification: M5Stack-era participation and AI activity in 2022, October 2026
+
+19  M5StackChan brings new people
+M5StackChan 带来新的参与者
+Target 13:55–14:38
+
+[READ ALOUD — ENGLISH]
+M5Stack introduced the commercial M5StackChan, with **very little involvement from me**. I welcome this **ready-made way to begin**, especially for people interested in trying AI in something physical. They can meet makers interested in hardware, outfits, and other activities. Community AI experiments and this product add **different possibilities**. People can **still build** the original robot or change a case. Those new possibilities also change what I want to make next.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+M5Stack
+https://shop.m5stack.com/products/stackchan-kawaii-co-created-open-source-ai-desktop-robot
+Speaker's account, October 2026
+Speaker's account, October 11, 2026
+
+SECTION 5  What Comes Next
+
+20  My next experiment
+我想尝试的下一步
+Target 14:38–15:34
+
+[READ ALOUD — ENGLISH]
+The dotted outside circle is **open for what comes next**. The earlier ways, including my own making at the center, stay with it. I want to try several Stack-chans **talking together**, with a person **listening and joining** when something interests them. Which robot **speaks next**? Where does it look? How does it notice someone wants to join? Blinking, gaze, **small movements**, and pauses still matter, even with two motors. This is **an experiment** I want to explore, rather than a finished system I am showing today.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+Speaker's account, October 2026
+
+21  10 minutes to begin, 10 years to keep making
+十分钟开始，十年持续创作
+Target 15:34–16:44
+
+[READ ALOUD — ENGLISH]
+I have **two long-term goals**. One is a community of **ten thousand** people around the world. It is **a goal for the future**, rather than a current headcount. The other is a robot you can start developing in **ten minutes** and keep making with for **ten years**. Stack-chan is **five years old**, halfway through that ten-year horizon. Five is also an age for curiosity, play, and making friends. I want the next five years to leave room for adventures we haven't imagined yet. The community can be **a safe base**: somewhere to ask for help, share an unfinished attempt, and return **after something fails**. That support can make it easier to try something new.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+Goal illustration supplied by the speaker; unmodified
+https://docs.google.com/presentation/d/1F6HZd5munASQ1E5YcKiYH9HYqzwtS2LFuMKvCi911TA
+Speaker's approved goals and closing, October 2026
+
+22  Come and join us
+欢迎你来参与
+Target 16:44–17:46
+
+[READ ALOUD — ENGLISH]
+Come and **join us**. You can build your own robot or begin with an M5StackChan, then bring **something you enjoy making**. You can program, draw a comic, make an outfit, share a photo, or tell us where you got stuck. I want the community to be a safe base that welcomes **experiments and mistakes**. From there, we can go out and try our own adventures. You can make something ambitious, or enjoy a small two-motor robot **at your own pace**. I will keep making things myself and helping other people make theirs. Today, being here is **my small adventure**. Thank you.
+
+[END OF SPOKEN TEXT]
+
+[REFERENCE ONLY — DO NOT READ ALOUD]
+Sources and image credits — DO NOT READ ALOUD
+https://github.com/stack-chan
+https://github.com/stack-chan/stack-chan
+https://shop.m5stack.com/products/stackchan-kawaii-co-created-open-source-ai-desktop-robot
+Speaker's account, October 11, 2026
+https://docs.google.com/presentation/d/1F6HZd5munASQ1E5YcKiYH9HYqzwtS2LFuMKvCi911TA
+Speaker's approved closing, October 2026
+

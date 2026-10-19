@@ -72,3 +72,18 @@ Page 14 uses the speaker-approved concrete example: a photo motivates the next w
 Speaker notes mark READ ALOUD, END OF SPOKEN TEXT and REFERENCE ONLY — DO NOT READ ALOUD. Sources, credits, stage directions and the unchanged Chinese pronunciation guide are reference material. `build/speaker-notes.json` is the per-page text used in the existing native Google Slides deck. The 100-word/minute elapsed-pace assumption includes ordinary pauses; only additional viewing and transitions are added to it.
 
 Two further assets are private and ignored by Git: `assets/private/sylacwa-stack-diary-12.jpeg` (the full 600 × 1200 four-panel comic by @sylacwa) and `assets/private/ten-minutes-ten-years.png` (the speaker-provided goal drawing). Their original bytes and aspect ratios remain unchanged. All comic panels and both signatures are retained. Obtain the original private files before rebuilding a complete deck from a clean clone; provenance and hashes are recorded without publishing their image bytes. The two previously excluded M5Stack images also remain private.
+
+
+## Sentence stress for reading aloud
+
+`Speaker-Script-Emphasis.md` contains the same complete script with selective bold words and short phrases for sentence-level stress. Removing its `**` markers reproduces `Speaker-Script.txt` byte for byte. The speech, sequence, Chinese introduction/reading guide and non-spoken references remain unchanged. Bold is a suggested emphasis cue, not syllable pronunciation, a mandatory stress on every sentence, a timing revision or evidence of a completed rehearsal.
+
+`speech-emphasis.json` is the shared list of exact phrases. `speech-emphasis.ts` validates unique matches and produces both Markdown and per-note UTF-16 ranges in `build/speaker-notes.json`. These ranges are applied as native Google Slides bold text styles without rewriting note text or altering slide images. Existing read-aloud labels, red end markers and gray references remain intact.
+
+After the normal build, generate the printable practice script with:
+
+```console
+npm run build:speaker-script-pdf
+```
+
+`output/RTE2026-Speaker-Script-Emphasis.pdf` contains all 22 slide sections, rehearsal guidance, the full Chinese reading guide and source notes across 24 A4 pages. English speech uses 16-point regular and bold Noto Sans; non-spoken material is smaller and gray. The PDF uses the installed PDFKit dependency and existing bundled fonts. Generated PDFs remain ignored by Git.

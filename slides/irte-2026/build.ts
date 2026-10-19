@@ -2,10 +2,12 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { minitype, p, image, url, pt, fill, rgb, type Group, type Flow } from '@minitype/minitype';
 import { growthRings, sections } from './growth-rings.js';
+import { emphasisSpans, emphasizeMarkdown, type EmphasisSpan } from './speech-emphasis.js';
 
 type Slide = {id:string;title:string;displayTitle?:string;zh:string;subtitle?:string;layout:string;image?:string;images?:string[];comic?:string;illustration?:string;illustrationCredit?:string;credit?:string;side?:string;lines?:string[];closing?:string;section?:number;sectionStart?:boolean;duration:number;notes:string;sources:string[];label?:string;pronunciation?:{zh:string;pinyin:string;ja:string}[];englishTransition?:string};
 const slides:Slide[]=JSON.parse(await fs.readFile('slides.json','utf8'));
 const dimensions:Record<string,number[]>=JSON.parse(await fs.readFile('asset-dimensions.json','utf8'));
+const speechEmphasis:Record<string,string[]>=JSON.parse(await fs.readFile('speech-emphasis.json','utf8'));
 const W=338.6667,H=190.5;
 const colors={ink:rgb(20,30,40),muted:rgb(86,101,111),accent:rgb(0,109,115)};
 
@@ -134,7 +136,8 @@ await fs.writeFile('build/diagnostics.json',JSON.stringify(await doc.getDiagnost
 const count=await doc.getPageCount();if(count!==slides.length) throw Error(`Expected ${slides.length} pages; got ${count}`);
 
 let seconds=0;
-const speakerNotes:{page:number;id:string;title:string;notes:string}[]=[];
+const speakerNotes:{page:number;id:string;title:string;notes:string;emphasis:EmphasisSpan[]}[]=[];
+const scriptEmphasis:EmphasisSpan[]=[];
 const time=(s:number)=>`${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
 const englishWordCount=slides.filter(s=>s.id!=='selfintro'&&s.id!=='cover').reduce((n,s)=>n+s.notes.split(/\s+/).length,0)+(slides.find(s=>s.id==='selfintro')?.englishTransition?.split(/\s+/).length||0);
 const totalSeconds=slides.reduce((sum,s)=>sum+s.duration,0);
@@ -158,9 +161,23 @@ slides.forEach((s,i)=>{
   script+='発音メモ（読み上げない）\nピンインの母音の上の記号は声調です。第1声 ā は高く平ら、第2声 á は上がる、第3声 ǎ は低く沈む、第4声 à は短く下がります。記号のない de は軽く短く発音します。カタカナでは音と声調を十分に表せないので、ピンインを基本に練習してください。句点でひと呼吸置き、名前と Stack-chan はいつもの発音で大丈夫です。\n\n';
  }else script+='[READ ALOUD — ENGLISH]\n'+s.notes+'\n\n[END OF SPOKEN TEXT]\n\n[REFERENCE ONLY — DO NOT READ ALOUD]\n';
  script+=`Sources and image credits — DO NOT READ ALOUD\n${s.credit?s.credit+'\n':''}${s.sources.join('\n')}\n\n`;
- speakerNotes.push({page:i+1,id:s.id,title:s.title,notes:'[SLIDE / TIMING — DO NOT READ]\n'+script.slice(noteStart).trim()});
+ const chunk=script.slice(noteStart);
+ const notePrefix='[SLIDE / TIMING — DO NOT READ]\n';
+ const spoken=s.id==='selfintro'?s.englishTransition!:s.id==='cover'?'':s.notes;
+ const emphasis:EmphasisSpan[]=[];
+ if(spoken){
+  const marker=chunk.indexOf('[READ ALOUD — ENGLISH');
+  const offset=chunk.indexOf(spoken,marker);
+  if(marker<0||offset<marker||offset+spoken.length>chunk.indexOf('[END OF SPOKEN TEXT]')) throw Error(`Cannot locate English speech: ${s.id}`);
+  for(const span of emphasisSpans(spoken,speechEmphasis[s.id]||[])){
+   emphasis.push({...span,startIndex:notePrefix.length+offset+span.startIndex,endIndex:notePrefix.length+offset+span.endIndex});
+   scriptEmphasis.push({...span,startIndex:noteStart+offset+span.startIndex,endIndex:noteStart+offset+span.endIndex});
+  }
+ }
+ speakerNotes.push({page:i+1,id:s.id,title:s.title,notes:notePrefix+chunk.trim(),emphasis});
 });
 await fs.writeFile('output/RTE2026-Growing-Together-Rings-Speaker-Script.txt',script);
+await fs.writeFile('output/Speaker-Script-Emphasis.md',emphasizeMarkdown(script,scriptEmphasis));
 await fs.writeFile('build/speaker-notes.json',JSON.stringify(speakerNotes,null,2));
 await fs.writeFile('build/presentation-checks.json',JSON.stringify({pages:count,sections:sections.map((section,index)=>({...section,pages:slides.flatMap((s,i)=>s.section===index+1?[i+1]:[])})),englishWordCount,totalSeconds,marginSeconds:1200-totalSeconds,assumedEnglishWordsPerMinute:assumedWordsPerMinute,paceIncludesOrdinaryPauses:true,englishElapsedSeconds:speechSeconds,chineseSeconds,openingSeconds:5,additionalViewingSeconds:pauseSeconds},null,2));
 console.log(`Created ${count} pages. Planned duration ${time(seconds)}. English words ${englishWordCount}. Script written.`);
