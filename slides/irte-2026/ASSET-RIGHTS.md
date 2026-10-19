@@ -22,7 +22,7 @@ The repository-wide license does **not** automatically apply to third-party imag
 | `shishikawa-business-card.png`<br>Shinya Ishikawa / Stack-chan community | Source: User-provided image, October 11, 2026<br>Acquired from: User-provided image, October 11, 2026 | Included. Supplied by the speaker for inclusion in this presentation. No broader reuse permission implied.<br>Transformation: Original image preserved in full; proportionally scaled with no cropping or redrawing. |
 | `stackchan-birth-tweet-card.jpg`<br>Shinya Ishikawa / @meganetaaan | Source: https://x.com/meganetaaan/status/1410631124045291521<br>Acquired from: https://x.com/meganetaaan/status/1410631124045291521 | Included. The speaker explicitly requested inclusion of this own post in the presentation. No unrelated reuse permission implied.<br>Transformation: Authentic browser region capture of the post card; no reconstructed text or generated image. Proportionally scaled. Video shown as a static frame. |
 
-The original photographic image bytes are preserved from the v5 source archive. Original images and added illustrations can be checked against `asset-sha256.json`. The two excluded files remain ignored locally. The original slide text, speaker script and photograph references are unchanged. Illustrated text pages have an additional image-and-text layout. No placeholder is silently substituted into the original presentation.
+The original photographic image bytes are preserved from the v5 source archive. Original images and added illustrations can be checked against `asset-sha256.json`. The two excluded files remain ignored locally. The original photographic references and image bytes are retained. The growth-rings edition updates narrative order, speaker notes and layouts without modifying the supplied image content. No placeholder is silently substituted into the original presentation.
 
 A clean clone contains 13 of the 15 archive images. The only unresolved slide image references are the two M5Stack store images listed above. `output/` PDFs are generated artifacts and are not tracked; the current PDF also embeds those two excluded images.
 
@@ -34,16 +34,20 @@ These images use a hand-drawn visual style but are **AI-generated with OpenAI Im
 
 | Slide | File | Source |
 | --- | --- | --- |
-| 7 · A paper-tube octopus | `illustrations/paper-tube-octopus.png` | User-approved AI-generated illustration |
-| 12 · A familiar face, your own expression | `illustrations/personal-expression.png` | User-approved AI-generated illustration |
+| 6 · A paper-tube octopus | `illustrations/paper-tube-octopus.png` | User-approved AI-generated illustration |
+| 14 · A familiar face, your own expression | `illustrations/personal-expression.png` | User-approved AI-generated illustration |
 | 20 · My next experiment | `illustrations/group-conversation.png` | User-approved AI-generated illustration |
 | 3 · When a companion's service ends | `illustrations/service-and-repair.png` | User-approved AI-generated illustration |
-| 8 · Two motors and a simple face | `illustrations/simple-robot-making.png` | User-approved AI-generated illustration |
-| 14 · A shared name for our creations | `illustrations/shared-guidelines.png` | User-approved AI-generated illustration |
-| 15 · A place to ask and share | `illustrations/ask-and-share.png` | User-approved AI-generated illustration |
+| 7 · Two motors and a simple face | `illustrations/simple-robot-making.png` | User-approved AI-generated illustration |
+| 11 · Keeping the shared name available | `illustrations/shared-guidelines.png` | User-approved AI-generated illustration |
+| 15 · Guidelines and a place to ask | `illustrations/ask-and-share.png` | User-approved AI-generated illustration |
 | 21 · 10,000 people | `illustrations/worldwide-community.png` | User-approved AI-generated illustration |
 | 22 · Come and join us | `illustrations/open-invitation.png` | User-approved AI-generated illustration |
 
 ## User-only working PDF
 
 The M5Stack store terms contain a general restriction on copying the store service without written permission. This review did not find a clause specifically addressing private storage of an already supplied presentation PDF. That is not a finding of an open image license or a legal determination about the terms. The existing user-supplied images remain in the user-only working PDF; the two original image files and every generated PDF remain excluded from public Git history. Saving a working PDF to the user’s Library does not grant public redistribution permission.
+
+## Editable growth-ring diagrams
+
+The native vector circles and robot in `growth-rings.ts` implement the user-approved conceptual mockup. The mockup bitmap is not embedded in the slides or included in Git. The vector construction is editable source, separate from the unchanged supplied illustration PNGs and third-party photographs. The rings are a metaphor for overlapping forms of participation, not a quantitative chart or a historical timeline.
