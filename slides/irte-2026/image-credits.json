@@ -274,5 +274,60 @@
     "modification": "Original PNG preserved; proportionally scaled without cropping or redrawing.",
     "width": 1672,
     "height": 941
+  },
+  {
+    "file": "growth-rings/1-personal.png",
+    "caption": "Growth-ring stage 1: personal, based on the approved hand-drawn reference",
+    "credit": "AI-generated reference-based artwork / OpenAI ImageGen",
+    "source": "User-provided approved growth-ring mockup and matching correction attachment, October 19, 2026",
+    "generation": "Derived using built-in ImageGen with the approved mockup as the edit/reference input. Preserves the original people, tools, clothing, expressive robot face, earlier gray layers and yellow arcs. This is a reference-based recreation, not pixel-identical cropping.",
+    "reuse": "Approved for this presentation; existing character and third-party rights are unchanged.",
+    "modification": "Generated PNG preserved without cropping or redrawing; displayed at its original aspect ratio.",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "file": "growth-rings/2-makers.png",
+    "caption": "Growth-ring stage 2: makers, based on the approved hand-drawn reference",
+    "credit": "AI-generated reference-based artwork / OpenAI ImageGen",
+    "source": "User-provided approved growth-ring mockup and matching correction attachment, October 19, 2026",
+    "generation": "Derived using built-in ImageGen with the approved mockup as the edit/reference input. Preserves the original people, tools, clothing, expressive robot face, earlier gray layers and yellow arcs. This is a reference-based recreation, not pixel-identical cropping.",
+    "reuse": "Approved for this presentation; existing character and third-party rights are unchanged.",
+    "modification": "Generated PNG preserved without cropping or redrawing; displayed at its original aspect ratio.",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "file": "growth-rings/3-expression.png",
+    "caption": "Growth-ring stage 3: expression, based on the approved hand-drawn reference",
+    "credit": "AI-generated reference-based artwork / OpenAI ImageGen",
+    "source": "User-provided approved growth-ring mockup and matching correction attachment, October 19, 2026",
+    "generation": "Derived using built-in ImageGen with the approved mockup as the edit/reference input. Preserves the original people, tools, clothing, expressive robot face, earlier gray layers and yellow arcs. This is a reference-based recreation, not pixel-identical cropping.",
+    "reuse": "Approved for this presentation; existing character and third-party rights are unchanged.",
+    "modification": "Generated PNG preserved without cropping or redrawing; displayed at its original aspect ratio.",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "file": "growth-rings/4-entrances.png",
+    "caption": "Growth-ring stage 4: entrances, based on the approved hand-drawn reference",
+    "credit": "AI-generated reference-based artwork / OpenAI ImageGen",
+    "source": "User-provided approved growth-ring mockup and matching correction attachment, October 19, 2026",
+    "generation": "Derived using built-in ImageGen with the approved mockup as the edit/reference input. Preserves the original people, tools, clothing, expressive robot face, earlier gray layers and yellow arcs. This is a reference-based recreation, not pixel-identical cropping.",
+    "reuse": "Approved for this presentation; existing character and third-party rights are unchanged.",
+    "modification": "Generated PNG preserved without cropping or redrawing; displayed at its original aspect ratio.",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "file": "growth-rings/5-future.png",
+    "caption": "Growth-ring stage 5: future, based on the approved hand-drawn reference",
+    "credit": "AI-generated reference-based artwork / OpenAI ImageGen",
+    "source": "User-provided approved growth-ring mockup and matching correction attachment, October 19, 2026",
+    "generation": "Derived using built-in ImageGen with the approved mockup as the edit/reference input. Preserves the original people, tools, clothing, expressive robot face, earlier gray layers and yellow arcs. This is a reference-based recreation, not pixel-identical cropping.",
+    "reuse": "Approved for this presentation; existing character and third-party rights are unchanged.",
+    "modification": "Generated PNG preserved without cropping or redrawing; displayed at its original aspect ratio.",
+    "width": 1254,
+    "height": 1254
   }
 ]

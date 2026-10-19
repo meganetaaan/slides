@@ -50,3 +50,16 @@ The illustrated edition adds AI-generated artwork to text-only pages and adjusts
 - English spoken word count, including the transition after the Chinese introduction: **1997**. At **120 words/minute**, English is approximately **16:39**, Chinese **0:45**, opening **0:05**, and pauses/diagram viewing/transitions approximately **1:52**. Total planning budget: **19:20**, with **0:40** margin before 20:00. Rounding is approximate; no live rehearsal timing is claimed.
 - Each main-talk slide has at least its word-count estimate at 120 words/minute plus 8 seconds for a large-diagram section opening or 4 seconds on other pages.
 - User-only PDF: `RTE2026-Growing-Together-Rings.pdf`, 16,599,152 bytes; SHA-256 `d913ba9ea62346dbe348dac122503dc4f01f2b2592908144f8ddbd1e81bcd92e`. Generated PDFs and the two M5Stack product images remain excluded from public Git history.
+
+## Artwork fidelity correction
+
+- Started from clean `cc365a8fea38db0e3434cdd552b2213aeba7d5ae`, matching the existing remote branch.
+- Opened the approved reference, the user’s matching correction attachment at original resolution, and the actual delivered PDF. Compared the missing people, clothing, tools, yellow arcs and footsteps.
+- Replaced native geometric drawing with five reference-derived built-in ImageGen PNGs. `growth-rings.ts` places images only; no rectangle/ellipse substitute drawing remains. Original generated images are proportionally displayed without cropping or stretching.
+- Compared all five restored stages against the approved reference and rendered all 22 pages, checking image/text overlap, footer badges, source photos, round rings and the complete retained figures.
+- `build/diagnostics.json`: empty array. All original visible text in the 22-page PDF matches the previous delivered PDF after whitespace normalization.
+- `slides.json`, `Speaker-Script.txt`, the generated rehearsal script, Chinese introduction/reading guide, all prior image bytes and all original image-credit records are unchanged.
+- Original presentation planning remains 1,997 English spoken words / 19:20 with 0:40 margin; no content or timing edits were made.
+- A comparison image includes the unchanged approved reference, previous and corrected page 13, and all five restored artwork assets. It is a document composition, not a program-drawn replacement for the artwork.
+- The two M5Stack product images remain untracked; no PDF or review screenshot is included in Git.
+- Corrected user-only PDF: 22,490,251 bytes, SHA-256 `6d9a49107eb2542d492a3949faa2edea1d1233fe487dcf20b52ea9833a51d960`.

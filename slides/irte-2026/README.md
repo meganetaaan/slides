@@ -6,7 +6,7 @@ Growth-rings edition, October 19, 2026: 22 slides, 1,997 English spoken words pl
 
 - `slides.json`: slide content, speaker notes, source links, timing and optional `illustration` / `illustrationCredit` fields
 - `build.ts`: TypeScript layouts and PDF exporter, including integrated section-opening content pages
-- `growth-rings.ts`: editable native vector circles, current-position accents and the persistent personal-making robot
+- `growth-rings.ts`: proportional placement of the five approved-reference artwork assets; it does not draw replacement illustrations
 - `Speaker-Script.txt`: the current English rehearsal script and unchanged Chinese introduction with reading guide
 - `assets/`, `fonts/`, `licenses/`: included materials and their notices
 - `image-credits.json`: original image provenance and reuse notes
@@ -34,7 +34,7 @@ npm ci --prefix slides/irte-2026
 npm run build:irte-2026
 ```
 
-Open `output/RTE2026-Growing-Together-Rings.pdf` in a PDF viewer. The build also writes `output/RTE2026-Growing-Together-Rings-Speaker-Script.txt`, `build/layout.json` and `build/diagnostics.json`. These generated directories, the font cache database and the fallback font copied from minitype are ignored by Git.
+Open `output/RTE2026-Growing-Together-Rings-Artwork.pdf` in a PDF viewer. The build also writes `output/RTE2026-Growing-Together-Rings-Speaker-Script.txt`, `build/layout.json` and `build/diagnostics.json`. These generated directories, the font cache database and the fallback font copied from minitype are ignored by Git.
 
 The PDF is static, 16:9, 960 × 540 points, with no runtime network requirement. Generated PDFs remain outside Git, matching the repository’s build-output convention. The current PDF also embeds the two excluded M5Stack store images. The original source archive and delivered PDF remain separate from this public-repository source tree.
 
@@ -52,8 +52,12 @@ Do not apply the repository root license to third-party materials as a blanket l
 
 The five sections are A Personal Project (3–7), Other Makers (8–12), More Ways to Create (13–17), New Ways In (18–19), and What Comes Next (20–22). The first content page of each section integrates a large diagram; no separate title pages are added. Other content pages carry a small current-position diagram at the lower right.
 
-`growth-rings.ts` draws native PDF vector shapes. Edit `ringRadii`, colors and the central robot there. The core remains visible, earlier circles remain solid and subdued, and only the future outside circumference is dotted. The yellow accent marks the current circle. Radii do not encode population, dates, maturity or a causal sequence. The design follows a user-approved visual mockup, which is not embedded as a slide or redistributed as an image. Existing illustrations remain unmodified and proportionally scaled.
+`growth-rings.ts` places the five hand-drawn artwork PNGs under `assets/growth-rings/` at a uniform aspect ratio. The former geometric reconstruction has been removed. The smiling robot, people, electronics, pencil, scarf, comic page, open-box robot, chat laptop, yellow arcs and future footsteps follow the approved visual reference. Only the future outside circumference is dotted; earlier layers remain visible in gray. Radii do not encode population, dates, maturity or a causal sequence. The design follows the user-approved visual mockup. Five standalone assets were recreated with built-in ImageGen using that mockup as a reference, rather than pasting a screenshot of the whole mockup into a slide. Their original generated pixels and the prompts are retained. They are not claimed to be exact pixel crops of the reference. Existing illustrations remain unmodified and proportionally scaled.
 
 The trademark is introduced in the early kit-development context, before the later derivative-work guidelines. No exact date or verified ordering relative to Takao’s kits is asserted. The later guidelines and Discord share one content page. Chapter-ending bridges and the closing invitation are included in the speaker notes.
 
 The generated `build/presentation-checks.json` records section pages, English word count, the assumed speaking rate, Chinese allowance, pauses and total planning budget. These estimates are not measured rehearsal times. The private working PDF retains the two supplied M5Stack store images; they remain excluded from the public repository.
+
+## Artwork fidelity correction
+
+The previous vector reconstruction had lost the original people, clothing, creative tools, yellow arcs and footsteps. The five replacement PNGs restore those elements in the approved visual language. `assets/growth-rings/PROMPTS.md` records the built-in ImageGen prompts; `image-credits.json` records AI provenance. `growth-rings.ts` now controls placement only. The 22-slide order, every `slides.json` field, Chinese self-introduction, speaker notes, source photos and original credit records are unchanged by this correction.

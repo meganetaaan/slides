@@ -31,8 +31,8 @@ function sectionOpening(s:Slide):Flow[]{
     ...lines.map((line,n)=>text(line,19,80+n*11,172,23,{bold:n===0})),
     picture((s.illustration||s.image)!,18,imageTop,172,165-imageTop),
     ...growthRings(s.section!,cx,cy),
-    text('Personal making',cx-17,cy+10,34,10,{align:'center'}),
-    text(s.section===5?'Earlier ways remain; the outside is still open':'Ways of taking part overlap',207,166,112,10,{color:'muted',align:'center'})
+    text('Personal making',207,163,112,10,{align:'center'}),
+    text(s.section===5?'Earlier ways remain; the outside is still open':'Ways of taking part overlap',207,169,112,9,{color:'muted',align:'center'})
   ];
 }
 function illustrated(s:Slide):Flow[]{
@@ -107,7 +107,7 @@ function page(s:Slide,i:number):Group{
 await fs.mkdir('output',{recursive:true});await fs.mkdir('build',{recursive:true});
 try { await fs.access('fonts/SourceHanSerifJP-Regular.otf'); } catch { await fs.copyFile('node_modules/@minitype/minitype/fonts/SourceHanSerifJP-Regular.otf','fonts/SourceHanSerifJP-Regular.otf'); }
 const doc=minitype(slides.map(page),{size:{width:W,height:H},padding:0,writingMode:'horizontal',block:{paragraph:{font:'NotoSans-Regular',size:pt(24),firstIndent:0,hyphenation:false}},gaps:[]},{fontDir:'fonts',disableDefaultTransformers:true,outline:false,metadata:{title:'Growing Together: Stack-chan and Its Open-Source Community',author:'Shinya Ishikawa',subject:'RTE 2026 · Growth Rings edition · October 19, 2026 · English / 简体中文'}});
-await doc.save('output/RTE2026-Growing-Together-Rings.pdf');
+await doc.save('output/RTE2026-Growing-Together-Rings-Artwork.pdf');
 await fs.writeFile('build/layout.json',JSON.stringify(await doc.getLayout(),null,2));
 await fs.writeFile('build/diagnostics.json',JSON.stringify(await doc.getDiagnostics(),null,2));
 const count=await doc.getPageCount();if(count!==slides.length) throw Error(`Expected ${slides.length} pages; got ${count}`);
