@@ -1,8 +1,8 @@
 # Growing Together · RTE 2026
 
-Current approved revision: 22 slides, 1,673 English spoken words (48 fewer than the preceding 1,721-word script), plus the unchanged Chinese self-introduction. The conservative schedule at 100 elapsed English words/minute, with Chinese, opening and additional viewing/transition time, totals 18:42 with 1:18 to spare before 20:00. This includes 20 seconds of newly marked stage pauses. These are estimates, not a measured rehearsal of the revised script.
+Current approved revision: 22 slides, 1,691 English spoken words (18 more than the preceding 1,673-word script), plus the unchanged Chinese self-introduction. The conservative schedule at 100 elapsed English words/minute, with Chinese, opening and additional viewing/transition time, totals 18:52 with 1:08 to spare before 20:00. This includes 20 seconds of marked stage pauses. These are estimates, not a measured rehearsal of the revised script.
 
-The earlier 1,616-word recording was 16:41.895. Applying the net +57 words at 100–115 words/minute and allowing 20 seconds for the new marked pauses projects approximately 17:32–17:36. The approximately 115 words/minute figure describes only the recording’s final 90-second segment, not a measured whole-talk rate. Reordering, delivery and ordinary pauses can change the actual time.
+The earlier 1,616-word recording was 16:41.895. Applying the net +75 words at 100–115 words/minute and allowing 20 seconds for the new marked pauses projects approximately 17:41–17:47. The approximately 115 words/minute figure describes only the recording’s final 90-second segment, not a measured whole-talk rate. Reordering, delivery and ordinary pauses can change the actual time.
 
 Based on the original v5 and the illustrated edition. The editable source uses `@minitype/minitype` 0.1.7. The growth-rings edition organizes the talk into five overlapping ways of taking part within the original 22 slides. Chinese introduction and pronunciation guidance, existing photos, source links, artwork PNGs and the dependency lockfile are retained.
 
@@ -102,10 +102,19 @@ The complete Chinese introduction and pronunciation guide are unchanged. No TTS 
 
 ## Concrete opening and speaking beats
 
-The title photo now has a short two-motor caption. Page 3 previews the existing case-change, outfit and comic examples before the personal origin story. The ring explanation is consolidated on page 8: overlapping ways in, rather than when people joined. Later pages retain the earlier activities and robo8080’s established participation while avoiding repeated definitions.
+The title photo now has a short two-motor caption. Page 3 previews the existing case-change, outfit and comic examples before the personal origin story. Page 3 introduces five overlapping stages, roughly following how possibilities expanded rather than when members joined. Later pages retain the earlier activities and robo8080’s established participation while avoiding repeated definitions.
 
 The ten-minute / ten-year pair is one spoken paragraph, followed by separate paragraphs for the future 10,000-person goal and the five-year-old project. The creator’s changing responsibilities return to “Growing Together” on page 20 and in the closing. Page 11 explicitly directs listeners to the published guidelines for applicable conditions and questions, without adding unconditional permission or the former-employer account. The existing final GitHub URL remains.
 
 Optional `stageDirections` entries in `slides.json` use zero-based `beforeParagraph`, `text` and `pauseSeconds`. Separate spoken paragraphs with a blank line. The build emits clearly marked STAGE DIRECTION blocks between READ ALOUD blocks, maps emphasis to the spoken paragraphs, and counts only speech as English words. Stage directions are gray and non-spoken in the PDF and native notes. Their planned pauses are counted in the schedule.
 
-Visible changes are limited to pages 1, 3, 11, 21 and 22. All source image bytes and ring placements remain unchanged. The complete Chinese introduction, English transition and pronunciation guide remain identical.
+The earlier concrete-opening revision changed visible pages 1, 3, 11, 21 and 22. All source image bytes and ring placements remain unchanged. The complete Chinese introduction, English transition and pronunciation guide remain identical.
+
+
+## Five stages and audience transitions
+
+Page 3 announces five overlapping stages, ending with what comes next. The sequence broadly follows expanding possibilities, rather than classifying people by when they joined. Each section opening carries a small `1 / 5` through `5 / 5` counter and begins aloud with First, Second, Third, Fourth or Fifth. The five section ranges remain 3–7, 8–12, 13–17, 18–19 and 20–22.
+
+Four short questions on pages 8, 13, 18 and 22 address parts already available, creating without code, curiosity about AI and what listeners would enjoy making. They invite reflection without requiring an answer or a show of hands. Existing two-second pauses are reused. Spoken edits are limited to pages 3, 8, 13, 18, 20 and 22; the only visible changes in this revision are the five counters on pages 3, 8, 13, 18 and 20.
+
+The 22-slide order, complete Chinese introduction, English transition, source images and approved ring artwork are retained. Current selective sentence stress comprises 126 exact spans. Timing remains an estimate: 18:52 under the conservative schedule, with 1:08 before 20:00; no new rehearsal is claimed.

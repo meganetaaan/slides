@@ -79,6 +79,7 @@ function page(s:Slide,i:number):Group{
   let b:Flow[]=[];
   if(s.sectionStart){
     b=sectionOpening(s);
+    b.push(text(`${s.section} / ${sections.length}`,292,11,28,15,{bold:true,color:'accent',align:'right'}));
   }else if(s.layout==='dual-goal'){
     b=[text(s.lines![0],18,18,302,30,{bold:true}),
       text(s.displayTitle||s.title,18,59,155,36,{bold:true,color:'accent'}),
@@ -206,5 +207,5 @@ slides.forEach((s,i)=>{
 await fs.writeFile('output/RTE2026-Growing-Together-Rings-Speaker-Script.txt',script);
 await fs.writeFile('output/Speaker-Script-Emphasis.md',emphasizeMarkdown(script,scriptEmphasis));
 await fs.writeFile('build/speaker-notes.json',JSON.stringify(speakerNotes,null,2));
-await fs.writeFile('build/presentation-checks.json',JSON.stringify({pages:count,sections:sections.map((section,index)=>({...section,pages:slides.flatMap((s,i)=>s.section===index+1?[i+1]:[])})),englishWordCount,totalSeconds,marginSeconds:1200-totalSeconds,assumedEnglishWordsPerMinute:assumedWordsPerMinute,paceIncludesOrdinaryPauses:true,englishElapsedSeconds:speechSeconds,chineseSeconds,openingSeconds:5,additionalViewingSeconds:pauseSeconds,explicitPauseSeconds,netEnglishWords,recordingReference,recordingProjection},null,2));
+await fs.writeFile('build/presentation-checks.json',JSON.stringify({pages:count,sectionCount:sections.length,sections:sections.map((section,index)=>({...section,pages:slides.flatMap((s,i)=>s.section===index+1?[i+1]:[])})),englishWordCount,totalSeconds,marginSeconds:1200-totalSeconds,assumedEnglishWordsPerMinute:assumedWordsPerMinute,paceIncludesOrdinaryPauses:true,englishElapsedSeconds:speechSeconds,chineseSeconds,openingSeconds:5,additionalViewingSeconds:pauseSeconds,explicitPauseSeconds,netEnglishWords,recordingReference,recordingProjection},null,2));
 console.log(`Created ${count} pages. Planned duration ${time(seconds)}. English words ${englishWordCount}. Script written.`);

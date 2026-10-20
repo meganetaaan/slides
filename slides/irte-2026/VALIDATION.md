@@ -123,3 +123,18 @@ The illustrated edition adds AI-generated artwork to text-only pages and adjusts
 - Local `RTE2026-Growing-Together-Approved-Revision.pdf`: 22,153,091 bytes; SHA-256 `f433021cc6fc69a1a207d3fbe33e4f84e80f0307adc1050fe3ca92d2eebc3b94`.
 - Local `RTE2026-Growing-Together-Updated.pdf`: 1,618,252 bytes; SHA-256 `cc43bec0f67a57f0244383db9beb91f9e5719155a3d22f95e3b9514e9cd78891`.
 - Local `RTE2026-Speaker-Script-Emphasis.pdf`: 194,165 bytes; SHA-256 `6bcb17eab50d59719824c12b9466a1d40c7213a3b310f48b2638758fb5e1fa13`.
+
+
+## Five-stage navigation and audience questions
+
+- Started from clean `1e41b55323d554dfa2c6d453b2d5055675764016`. The fresh native revision and all 22 note pages matched the saved baseline; no intervening manual edits were found. Writes retained revision guards.
+- Actual sections are A Personal Project (3–7), Other Makers (8–12), More Ways to Create (13–17), New Ways In (18–19), and What Comes Next (20–22). Page 3 announces five overlapping stages, broadly following expanded possibilities, not member joining dates. First through Fifth introduce those sections aloud; their opening pages show `1 / 5` through `5 / 5`.
+- Spoken changes are limited to pages **3, 8, 13, 18, 20 and 22**. Four brief audience questions require no answer or hands. Existing pauses are reused, totaling **20 seconds**. Earlier content, stress selections, images, ring proportions and the complete Chinese source and native note page are preserved.
+- English speech: **1,691 words**, net **+18** from the preceding version. Conservative estimate: **18:52**, with **1:08** before 20:00, at 100 elapsed English words/minute plus Chinese, opening and additional viewing. Recording-relative projection: approximately **17:41–17:47**, using the earlier 16:41.895 recording, net +75 words and marked pauses. Neither is a measured rehearsal of this revision.
+- Both builds pass; **22 slide pages**, **25 A4 script pages**, no layout diagnostics. All final practice pages and all 22 native slide image resources were rendered and visually inspected. Counters do not overlap existing content. The existing export helper's materialization limitation remains; API-returned actual slide images and native frame properties support display verification.
+- Removing Markdown bold markers reproduces the plain script byte for byte. Layout-preserving PDF extraction matches every non-whitespace script character after compatibility normalization; extracted body bold text matches all **126** selected spans. Full-quality and lightweight slide PDFs have the same complete text.
+- Native readback matches all 22 generated notes and every selected emphasis span. Pages 3–22 update their timing/note text; pages 1–2 are untouched. Only visible pages **3, 8, 13, 18 and 20** change; the other **17** page elements are identical excluding expiring image URLs. Native issue checker: **0 findings**. Existing file, slide and image IDs and private sharing are retained.
+- PDFs, private assets, temporary helpers and review logs remain outside Git. GitHub authentication is `meganetaaan`; this revision targets only `feat/irte-2026-slides`, with no main update, PR or merge.
+- Local `RTE2026-Growing-Together-Approved-Revision.pdf`: 22,154,049 bytes; SHA-256 `17411851698de3495fdf17f717a07b42cc095f68aa6a2bfcd91820897873a8ae`.
+- Local `RTE2026-Growing-Together-Updated.pdf`: 1,586,651 bytes; SHA-256 `07eb7bb53358d3b76d9d2c7ac6d25d7eb9fdb216e91b9b83dc59c9a85bc0aa15`.
+- Local `RTE2026-Speaker-Script-Emphasis.pdf`: 195,021 bytes; SHA-256 `1d1d8e3b2c8ca27854408be49506d21f1d3ee0a015226804d8ad46a59e4c232f`.

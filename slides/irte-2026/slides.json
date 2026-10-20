@@ -67,8 +67,8 @@
       "Change a case. Make an outfit."
     ],
     "credit": "Source: Hackaday.io · Stack-chan project",
-    "duration": 67,
-    "notes": "Stack-chan is a palm-sized, open-source robot with two motors and a simple face. People change a case to fit a motor they already own, or make outfits and comics. Today I want to show how those small acts changed the community—and changed me.\n\nA communication robot can become a companion. When its proprietary service ends, that companion can die while its body is still beside you. I wanted people to repair their robots, replace services, and keep them running. I wanted a community where everyone could be both a developer and a user. First, let me show how I learned to build this robot.",
+    "duration": 73,
+    "notes": "Stack-chan is a palm-sized, open-source robot with two motors and a simple face. People change a case to fit a motor they already own, or make outfits and comics. Those small acts changed the community—and changed me.\n\nA communication robot can become a companion. When its proprietary service ends, that companion can die while its body is still beside you. I wanted people to repair their robots, replace services, and keep them running. I wanted a community where everyone could be both a developer and a user.\n\nI'll describe our growth in five overlapping stages, ending with what comes next. They roughly follow how the possibilities expanded, not when people joined. First, my own making.",
     "sources": [
       "https://hackaday.io/project/181344-stack-chan-javascript-driven-super-kawaii-robot",
       "Speaker's account, October 11, 2026",
@@ -163,8 +163,8 @@
     "image": "m5stack-basic-device.jpg",
     "credit": "M5Stack",
     "side": "M5Stack\nShared projects\nPeople helping people",
-    "duration": 57,
-    "notes": "This circle shows other makers, alongside personal making. The circles show overlapping ways in, not the order people joined. I already belonged to a maker community around M5Stack, a compact module with a screen. Makers shared projects and advice, and distributors such as Switch Science helped make the hardware available. I learned from their work. Some became Stack-chan's first builders. The rough first version took effort to assemble. Sharing the design was a start; people willing to try it and help made it useful.",
+    "duration": 53,
+    "notes": "Second, other makers. What could you change with parts you already have?\n\nI already belonged to a maker community around M5Stack, a compact module with a screen. Makers shared projects and advice, and distributors such as Switch Science helped make the hardware available. I learned from their work. Some became Stack-chan's first builders. The rough first version took effort to assemble. Sharing the design was a start; people willing to try it and help made it useful.",
     "sources": [
       "https://slides.com/meganetaaan/m5stack",
       "https://shop.m5stack.com/products/esp32-basic-core-iot-development-kit-v2-6"
@@ -174,7 +174,7 @@
     "stageDirections": [
       {
         "beforeParagraph": 0,
-        "text": "Point from the central robot to the wider ring. Pause for 2 seconds.",
+        "text": "Point from the central robot to the wider ring. After the question, pause for 2 seconds, then continue with the example.",
         "pauseSeconds": 2
       }
     ]
@@ -262,8 +262,8 @@
     "image": "stack-san-portrait.jpg",
     "credit": "Latte / ProtoPedia · Comic: @sylacwa — x.com/sylacwa/status/1557313306737754112/photo/1",
     "side": "Stack-san by Latte\nComics and outfits too",
-    "duration": 62,
-    "notes": "This circle adds more ways to create. This is Stack-san, a wearable creation by Latte. Its scale and the way it meets people are very different from my desk robot. Beside it is a four-panel comic by sylacwa. Other people make outfits or tell stories about their Stack-chans. I hadn't anticipated these forms of participation. On Twitter, I noticed people whose interests were different from the engineering circles I knew. They were enjoying the same character through their own kinds of making. Engineering remained important, with more ways to take part alongside it.",
+    "duration": 65,
+    "notes": "Third, more ways to create. What if you don't write code?\n\nThis is Stack-san, a wearable creation by Latte. Its scale and the way it meets people are very different from my desk robot. Beside it is a four-panel comic by sylacwa. Other people make outfits or tell stories about their Stack-chans. I hadn't anticipated these forms of participation. On Twitter, I noticed people whose interests were different from the engineering circles I knew. They were enjoying the same character through their own kinds of making. Engineering remained important, with more ways to take part alongside it.",
     "sources": [
       "https://protopedia.net/prototype/4058",
       "Speaker's account, October 11, 2026",
@@ -276,7 +276,7 @@
     "stageDirections": [
       {
         "beforeParagraph": 0,
-        "text": "Point to the new creative activities, leaving the earlier rings visible. Pause for 2 seconds.",
+        "text": "Point to the new creative activities, leaving the earlier rings visible. After the question, pause for 2 seconds, then continue.",
         "pauseSeconds": 2
       }
     ]
@@ -361,8 +361,8 @@
     "image": "robo8080-ai-stackchan.jpg",
     "credit": "robo8080 / ProtoPedia, CC BY 4.0",
     "side": "robo8080\nAn early maker opens new entrances",
-    "duration": 60,
-    "notes": "An existing maker opened another entrance through AI. robo8080 was already part of the M5Stack community and was exploring AI in 2022. Later, he connected Stack-chan to an LLM and created AI Stack-chan. Other people shared tutorials and further integrations. An experienced member's experiments opened an entrance for people who had never built a robot. They could start with an interest in AI and meet a physical robot they could change. Personal making, hardware adaptations, and creative expression continued alongside it. A ready-made product offers another way to begin.",
+    "duration": 63,
+    "notes": "Fourth, new ways in. Curious about AI, even if you've never built a robot?\n\nrobo8080 was already part of the M5Stack community and was exploring AI in 2022. Later, he connected Stack-chan to an LLM and created AI Stack-chan. Other people shared tutorials and further integrations. An experienced member's experiments opened another entrance for people who had never built a robot. They could start with an interest in AI and meet a physical robot they could change. Personal making, hardware adaptations, and creative expression continued alongside it. A ready-made product offers another way to begin.",
     "sources": [
       "https://protopedia.net/prototype/4052",
       "https://creativecommons.org/licenses/by/4.0/",
@@ -375,7 +375,7 @@
     "stageDirections": [
       {
         "beforeParagraph": 0,
-        "text": "Point to the AI entrance while keeping the earlier activities in view. Pause for 2 seconds.",
+        "text": "Point to the AI entrance while keeping the earlier activities in view. After the question, pause for 2 seconds, then continue.",
         "pauseSeconds": 2
       }
     ]
@@ -406,8 +406,8 @@
       "Several robots talking together",
       "A person can listen, then join"
     ],
-    "duration": 77,
-    "notes": "The dotted outside circle is open for what comes next.\n\nAs the community grew, my role changed too: manuals, a trademark, guidelines, communication tools, and business cards. I learned to respond to what people needed. Growing Together means this too: the members grew, the community grew, and I grew with them.\n\nI want to try several Stack-chans talking together, with a person listening and joining when something interests them. Which robot speaks next? Where does it look? How does it notice someone wants to join? Blinking, gaze, small movements, and pauses still matter, even with two motors. This is an experiment I want to explore, rather than a finished system I am showing today.",
+    "duration": 76,
+    "notes": "Fifth, the circle is open for what comes next.\n\nAs the community grew, my role changed too: manuals, a trademark, guidelines, communication tools, and business cards. I learned to respond to what people needed. Growing Together means this too: the members grew, the community grew, and I grew with them.\n\nI want to try several Stack-chans talking together, with a person listening and joining when something interests them. Which robot speaks next? Where does it look? How does it notice someone wants to join? Blinking, gaze, small movements, and pauses still matter, even with two motors. This is an experiment I want to explore, rather than a finished system I am showing today.",
     "sources": [
       "Speaker's account, October 2026",
       "Speaker's approved additions, October 2026"
@@ -477,8 +477,8 @@
       "A safe base for\nnew adventures",
       "Experiments and\nmistakes welcome"
     ],
-    "duration": 63,
-    "notes": "Come and join us. You can build your own robot or begin with an M5StackChan, then bring something you enjoy making. You can program, draw a comic, make an outfit, share a photo, or tell us where you got stuck. I want the community to be a safe base that welcomes experiments and mistakes. From there, we can go out and try our own adventures. You can make something ambitious, or enjoy a small two-motor robot at your own pace.\n\nWe are growing together: the makers, the community, and me. Today, being here is my small adventure. Thank you.",
+    "duration": 66,
+    "notes": "Come and join us. What would you enjoy making? You can build your own robot or begin with an M5StackChan, then bring something you enjoy making. You can program, draw a comic, make an outfit, share a photo, or tell us where you got stuck. I want the community to be a safe base that welcomes experiments and mistakes. From there, we can go out and try our own adventures. You can make something ambitious, or enjoy a small two-motor robot at your own pace.\n\nWe are growing together: the makers, the community, and me. Today, being here is my small adventure. Thank you.",
     "sources": [
       "https://github.com/stack-chan",
       "https://github.com/stack-chan/stack-chan",
