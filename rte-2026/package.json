@@ -1,0 +1,22 @@
+{
+  "name": "rte-2026-growing-together",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "test": "node scripts/verify.mjs"
+  },
+  "dependencies": {
+    "@fontsource/noto-sans": "5.2.5",
+    "@fontsource/noto-sans-sc": "5.2.5",
+    "reveal.js": "5.2.1"
+  },
+  "devDependencies": {
+    "fflate": "0.8.2",
+    "gifuct-js": "2.1.2",
+    "playwright": "1.56.1",
+    "pngjs": "7.0.0"
+  }
+}

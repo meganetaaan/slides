@@ -1,0 +1,12 @@
+html,body{background:#fff;color:#14212b;font-family:'Noto Sans','Noto Sans SC',sans-serif}
+.reveal{overflow:clip}
+.reveal .slides>section{padding:0!important;width:1600px;height:900px;overflow:hidden;line-height:1}
+.reveal .slides img{margin:0;border:0;box-shadow:none;max-width:none;max-height:none}
+.reveal .slides .slide-art{position:absolute;inset:0;width:100%;height:100%;display:block}
+.reveal .slides .animation{position:absolute;object-fit:fill;display:block}
+.reveal .slides aside.notes{display:none!important}
+.reveal .controls{color:#007478}
+.reveal .progress{color:#007478;height:3px}
+.reveal .slide-number{font:14px 'Noto Sans',sans-serif;background:rgba(255,255,255,.9);color:#52636c;border-radius:3px;padding:4px 7px}
+.reveal .speaker-notes{font-family:'Noto Sans','Noto Sans SC',sans-serif}
+@media print{.reveal .controls,.reveal .progress,.reveal .slide-number{display:none!important}}
