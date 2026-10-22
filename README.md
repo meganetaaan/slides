@@ -24,4 +24,4 @@ Pull Request作成やmainブランチの更新時、gh-pagesにスライドが�
 
 ## iRTE 2026 — Growing Together
 
-[reveal.js版・起動/ビルド手順](./rte-2026/README.md) と [静的配布物](./rte-2026/dist/) を追加しています。28物理スライド、6本のGIF、書式付き発表者ノート、ローカルのreveal.jsとフォントを同梱しています。既存のMarp版と公開workflowは継続して利用できます。
+[reveal.js版・起動/ビルド手順](./rte-2026/README.md) と [静的配布物](./rte-2026/dist/) を追加しています。27枚の有効スライド、6本のGIF、書式付き発表者ノート、ローカルのreveal.jsとフォントを同梱しています。既存のMarp版と公開workflowは継続して利用できます。

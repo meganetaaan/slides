@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "serve": "node scripts/serve.mjs",
-    "test": "node scripts/verify.mjs"
+    "test": "node scripts/verify.mjs",
+    "test:file": "node scripts/verify-file.mjs"
   },
   "dependencies": {
     "@fontsource/noto-sans": "5.2.5",

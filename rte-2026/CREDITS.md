@@ -1,6 +1,6 @@
 # Credits and licenses
 
-Presentation: Shinya Ishikawa / Stack-chan community, **Growing Together — iRTE 2026**. Slide sequence and artwork follow the approved 28-page presentation. Existing on-slide credits and reference notes are retained. The repository's [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license remains in force; third-party works retain their original terms.
+Presentation: Shinya Ishikawa / Stack-chan community, **Growing Together — iRTE 2026**. Slide sequence and artwork follow the approved presentation with 27 active pages (one source page is skipped). Existing on-slide credits and reference notes are retained. The repository's [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license remains in force; third-party works retain their original terms.
 
 - Stack-chan: https://github.com/stack-chan/stack-chan
 - m5stack-avatar contributors: https://github.com/stack-chan/m5stack-avatar

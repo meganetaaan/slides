@@ -1,7 +1,12 @@
 {
   "passed": true,
-  "revision": "YOwu0o0AOliVxA",
-  "physicalSlides": 28,
+  "revision": "FaCsb3tnkppT1g",
+  "physicalSlides": 27,
+  "skippedSlideIds": [
+    "p16"
+  ],
+  "sourceAndDistMatch": true,
+  "allNotesAndBoldMatch": true,
   "offlineTest": "All non-loopback HTTP requests blocked at browser routing; new context and local HTTP reload succeeded.",
   "externalRequests": [],
   "httpFailures": [],
@@ -120,66 +125,60 @@
     },
     {
       "index": 18,
-      "id": "p16",
-      "artworkComparedPixels": 1440000,
-      "artworkDifferentPixels": 0
-    },
-    {
-      "index": 19,
-      "id": "p17",
-      "artworkComparedPixels": 1440000,
-      "artworkDifferentPixels": 0
-    },
-    {
-      "index": 20,
-      "id": "rte_p17_2024_20261021",
-      "artworkComparedPixels": 1440000,
-      "artworkDifferentPixels": 0
-    },
-    {
-      "index": 21,
-      "id": "rte_p17_2026_20261021",
-      "artworkComparedPixels": 1440000,
-      "artworkDifferentPixels": 0
-    },
-    {
-      "index": 22,
       "id": "p18",
       "artworkComparedPixels": 1440000,
       "artworkDifferentPixels": 0
     },
     {
-      "index": 23,
+      "index": 19,
       "id": "p19",
       "artworkComparedPixels": 1217504,
       "artworkDifferentPixels": 0
     },
     {
-      "index": 24,
+      "index": 20,
       "id": "rte_p19_running_20261021",
       "artworkComparedPixels": 1010597,
       "artworkDifferentPixels": 0
     },
     {
-      "index": 25,
+      "index": 21,
       "id": "rte_p19_wearing_20261021",
       "artworkComparedPixels": 940870,
       "artworkDifferentPixels": 0
     },
     {
-      "index": 26,
+      "index": 22,
+      "id": "p17",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 23,
+      "id": "rte_p17_2024_20261021",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 24,
+      "id": "rte_p17_2026_20261021",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 25,
       "id": "p20",
       "artworkComparedPixels": 1440000,
       "artworkDifferentPixels": 0
     },
     {
-      "index": 27,
+      "index": 26,
       "id": "p21",
       "artworkComparedPixels": 1440000,
       "artworkDifferentPixels": 0
     },
     {
-      "index": 28,
+      "index": 27,
       "id": "p22",
       "artworkComparedPixels": 1440000,
       "artworkDifferentPixels": 0
@@ -195,15 +194,15 @@
       "changedPixels": 78711
     },
     {
-      "slide": 23,
+      "slide": 19,
       "id": "rte19_dance_gif_20261021",
       "frames": 48,
       "distinctPatches": 48,
       "durationMs": 8000,
-      "changedPixels": 104155
+      "changedPixels": 117895
     },
     {
-      "slide": 24,
+      "slide": 20,
       "id": "run19_geh_gif",
       "frames": 48,
       "distinctPatches": 48,
@@ -211,7 +210,7 @@
       "changedPixels": 422774
     },
     {
-      "slide": 25,
+      "slide": 21,
       "id": "wear19_clothes_gif",
       "frames": 48,
       "distinctPatches": 48,
@@ -219,7 +218,7 @@
       "changedPixels": 95188
     },
     {
-      "slide": 25,
+      "slide": 21,
       "id": "wear19_ribbon_gif",
       "frames": 48,
       "distinctPatches": 48,
@@ -227,12 +226,12 @@
       "changedPixels": 180340
     },
     {
-      "slide": 25,
+      "slide": 21,
       "id": "wear19_hat_gif",
       "frames": 48,
       "distinctPatches": 48,
       "durationMs": 8000,
-      "changedPixels": 160079
+      "changedPixels": 159591
     }
   ]
 }
