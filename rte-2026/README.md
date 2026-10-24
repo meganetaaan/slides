@@ -1,5 +1,7 @@
 # Growing Together — iRTE 2026
 
+2026-10-24確認: 前回納品ZIPと現在のGoogle Slides revisionは一致しており、下記の内容が最新です。ZIPを正本として `dist/` の全実行ファイルを照合しました。比較結果とPPTX予備版の構造検証は [evidence/rehearsal-20261024.json](evidence/rehearsal-20261024.json) に記録しています。
+
 Google Slides 最終版（revision `FaCsb3tnkppT1g`）の27枚の有効スライドを保持した、reveal.jsによる静的プレゼンテーションです。タコの1匹→2匹は2ページのままです。全景PNGで写真・文字・circle・クレジットの配置を保ち、6本の元GIFをGoogle Slidesの座標に重ねています。
 
 ## そのまま使う

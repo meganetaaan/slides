@@ -1,0 +1,84 @@
+{
+  "comparisonBeforeSync": {
+    "date": "2026-10-24",
+    "sourceOfTruth": "previously delivered HTML ZIP",
+    "masterZipBytes": 24723402,
+    "masterZipSha256": "6d15edeba22c7592cbe1d81749779b94a3aa610b0c4fe8c406685c1ad2364194",
+    "driveZipModifiedUTC": "2026-10-22T16:04:37.410Z",
+    "googleSlidesModifiedUTC": "2026-10-22T15:50:50.725Z",
+    "canonicalRevision": "FaCsb3tnkppT1g",
+    "localSourceRevision": "FaCsb3tnkppT1g",
+    "localCommitBeforeSync": "755cf380607d8a33147a04cf4e267f5d5edddd60",
+    "activeSlideCount": 27,
+    "skippedSourceSlideIds": [
+      "p16"
+    ],
+    "currentOrderMatches": true,
+    "allSpokenNotesAndStageCuesMatch": true,
+    "localArchiveExactlyMatchesDeliveredArchive": true,
+    "runtimeFileDifferencesBeforeSync": [
+      "README.md"
+    ],
+    "differenceExplanation": "Only the dist README contains source build documentation; ZIP README contains launch instructions. Presentation runtime content is identical.",
+    "rollbackRequired": false
+  },
+  "validation": {
+    "date": "2026-10-24",
+    "canonicalRevision": "FaCsb3tnkppT1g",
+    "runtimeEntriesMatchDeliveredZip": true,
+    "activeSlideOrderMatchesZip": true,
+    "pptxPhysicalSlides": 28,
+    "pptxActiveSlides": 27,
+    "hiddenSlideIds": [
+      "p16"
+    ],
+    "allNotesTextMatchCanonical": true,
+    "allNotesBoldCharactersMatchCanonical": true,
+    "allSixGifBytesMatchZip": true,
+    "missingInternalRelationships": [],
+    "externalMediaDependencies": [],
+    "externalHyperlinkCount": 11,
+    "zipIntegrity": true,
+    "nativePowerPointPlaybackTested": false,
+    "nativeSlideRenderingTested": false,
+    "nativeValidationLimit": "Presentations runtime loader is unavailable for this thread. No installed PowerPoint/LibreOffice renderer was found. Native export was kept unchanged."
+  },
+  "pptxGifPlacement": [
+    {
+      "id": "b10a_ob_photo",
+      "maxPositionErrorPixels": 4.85565299968016e-05,
+      "originalGifBytesMatch": true
+    },
+    {
+      "id": "rte19_dance_gif_20261021",
+      "maxPositionErrorPixels": 0.0,
+      "originalGifBytesMatch": true
+    },
+    {
+      "id": "run19_geh_gif",
+      "maxPositionErrorPixels": 4.3963254536816265e-05,
+      "originalGifBytesMatch": true
+    },
+    {
+      "id": "wear19_clothes_gif",
+      "maxPositionErrorPixels": 0.0,
+      "originalGifBytesMatch": true
+    },
+    {
+      "id": "wear19_ribbon_gif",
+      "maxPositionErrorPixels": 0.0,
+      "originalGifBytesMatch": true
+    },
+    {
+      "id": "wear19_hat_gif",
+      "maxPositionErrorPixels": 3.3792650977471084e-05,
+      "originalGifBytesMatch": true
+    }
+  ],
+  "publicBranchPushAuthorized": true,
+  "pagesDeploymentRequested": false,
+  "workflowPushBranches": [
+    "main"
+  ],
+  "pullRequestCreated": false
+}

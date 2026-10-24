@@ -56,7 +56,8 @@ await writeFile(path.join(dist,'index.html'),html);
 await cp(path.join(source,'deck.css'),path.join(dist,'deck.css'));
 await cp(path.join(source,'deck.js'),path.join(dist,'deck.js'));
 await cp(path.join(source,'deck.json'),path.join(dist,'deck.json'));
-for(const name of ['README.md','CREDITS.md','LAUNCH.md'])await cp(path.join(root,name),path.join(dist,name));
+await cp(path.join(root,'CREDITS.md'),path.join(dist,'CREDITS.md'));
+await cp(path.join(root,'LAUNCH.md'),path.join(dist,'README.md'));
 await cp(path.join(root,'evidence'),path.join(dist,'evidence'),{recursive:true});
 await cp(path.join(root,'../LICENSE'),path.join(dist,'LICENSE'));
 await writeFile(path.join(dist,'.nojekyll'),'');
@@ -70,7 +71,5 @@ async function collect(dir,prefix=''){
 }
 await collect(dist);
 for(const name of Object.keys(files))if(name.startsWith('evidence/')||name==='deck.json')delete files[name];
-files['README.md']=files['LAUNCH.md'];
-delete files['LAUNCH.md'];
 await writeFile(path.join(root,'rte-2026-offline.zip'),zipSync(files,{level:6}));
 console.log(`Built ${deck.slides.length} slides, ${deck.slides.flatMap(s=>s.animations).length} animated GIFs and ZIP.`);
