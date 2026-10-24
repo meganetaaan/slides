@@ -1,0 +1,237 @@
+{
+  "passed": true,
+  "revision": "FaCsb3tnkppT1g",
+  "physicalSlides": 27,
+  "skippedSlideIds": [
+    "p16"
+  ],
+  "sourceAndDistMatch": true,
+  "allNotesAndBoldMatch": true,
+  "offlineTest": "All non-loopback HTTP requests blocked at browser routing; new context and local HTTP reload succeeded.",
+  "externalRequests": [],
+  "httpFailures": [],
+  "pageErrors": [],
+  "keyboardNavigation": true,
+  "touchNavigation": true,
+  "notesPopup": true,
+  "notesBold": true,
+  "notesStageCues": true,
+  "mobileViewport": {
+    "width": 390,
+    "height": 844
+  },
+  "slides": [
+    {
+      "index": 1,
+      "id": "p1",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 2,
+      "id": "p2",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 3,
+      "id": "p3",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 4,
+      "id": "p4",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 5,
+      "id": "p5",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 6,
+      "id": "p6",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 7,
+      "id": "rte_p6_reveal_20261021",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 8,
+      "id": "p7",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 9,
+      "id": "p8",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 10,
+      "id": "p9",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 11,
+      "id": "p10",
+      "artworkComparedPixels": 1326208,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 12,
+      "id": "rte_p10_boards_20261021",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 13,
+      "id": "p11",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 14,
+      "id": "p12",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 15,
+      "id": "p13",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 16,
+      "id": "p14",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 17,
+      "id": "p15",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 18,
+      "id": "p18",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 19,
+      "id": "p19",
+      "artworkComparedPixels": 1217504,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 20,
+      "id": "rte_p19_running_20261021",
+      "artworkComparedPixels": 1010597,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 21,
+      "id": "rte_p19_wearing_20261021",
+      "artworkComparedPixels": 940870,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 22,
+      "id": "p17",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 23,
+      "id": "rte_p17_2024_20261021",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 24,
+      "id": "rte_p17_2026_20261021",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 25,
+      "id": "p20",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 26,
+      "id": "p21",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    },
+    {
+      "index": 27,
+      "id": "p22",
+      "artworkComparedPixels": 1440000,
+      "artworkDifferentPixels": 0
+    }
+  ],
+  "animations": [
+    {
+      "slide": 11,
+      "id": "b10a_ob_photo",
+      "frames": 65,
+      "distinctPatches": 65,
+      "durationMs": 6500,
+      "changedPixels": 78711
+    },
+    {
+      "slide": 19,
+      "id": "rte19_dance_gif_20261021",
+      "frames": 48,
+      "distinctPatches": 48,
+      "durationMs": 8000,
+      "changedPixels": 117895
+    },
+    {
+      "slide": 20,
+      "id": "run19_geh_gif",
+      "frames": 48,
+      "distinctPatches": 48,
+      "durationMs": 8000,
+      "changedPixels": 422774
+    },
+    {
+      "slide": 21,
+      "id": "wear19_clothes_gif",
+      "frames": 48,
+      "distinctPatches": 48,
+      "durationMs": 8000,
+      "changedPixels": 95188
+    },
+    {
+      "slide": 21,
+      "id": "wear19_ribbon_gif",
+      "frames": 48,
+      "distinctPatches": 48,
+      "durationMs": 8000,
+      "changedPixels": 180340
+    },
+    {
+      "slide": 21,
+      "id": "wear19_hat_gif",
+      "frames": 48,
+      "distinctPatches": 48,
+      "durationMs": 8000,
+      "changedPixels": 159591
+    }
+  ]
+}

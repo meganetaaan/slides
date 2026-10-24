@@ -1,0 +1,49 @@
+name: publish-rte
+concurrency: publish-marp
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - rte-2026/**
+      - .github/workflows/publish-rte.yml
+  pull_request:
+    paths:
+      - rte-2026/**
+      - .github/workflows/publish-rte.yml
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node rte-2026/scripts/stage-public.mjs
+  deploy:
+    needs: validate
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout approved presentation
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate and stage public presentation
+        run: node rte-2026/scripts/stage-public.mjs
+      - name: Publish RTE subdirectory
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: .pages-rte
+          target-folder: rte-2026
+          force: false
+          commit-message: Publish iRTE 2026 from ${{ github.sha }}
