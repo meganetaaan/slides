@@ -4,6 +4,11 @@ concurrency: publish-marp
 on:
   push:
     branches: [ main ]
+    paths:
+      - slides.md
+      - assets/**
+      - package.json
+      - package-lock.json
   pull_request:
     types:
       - opened
@@ -42,4 +47,7 @@ jobs:
         with:
           branch: gh-pages
           folder: ./build/
-          clean-exclude: pr-preview/
+          force: false
+          clean-exclude: |
+            pr-preview/
+            rte-2026/
