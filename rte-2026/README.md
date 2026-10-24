@@ -34,7 +34,7 @@ npm run serve
 
 `dist/` の内容を任意の静的HTTPホスティングの同じディレクトリに配置してください。サブディレクトリでも相対URLで動作します。HTML/CSS/JavaScript、PNG/GIF、WOFF2を通常のMIMEタイプで配信してください。reveal.js・notes plugin・CSS・フォント・画像を同梱しています。CDNやGoogleへの実行時アクセスはありません。
 
-この追加では既存のMarpエントリーポイントと公開workflowを変更していません。既存workflowはmain pushまたはPR操作を契機に動きます。専用ブランチへのpushだけではそのworkflowは実行されません。このフォルダの追加だけではRTE版の自動公開は設定されません。
+公開先は https://meganetaaan.github.io/slides/rte-2026/ です。mainのRTE変更は専用workflowでgh-pagesのrte-2026/だけに反映します。公開対象は検証済みの実行用ファイルに限定し、ソースJSONと検証資料はサイトへ配置しません。既存のTSKaigi版とPRプレビューは保持され、従来版の更新でもRTEディレクトリを削除しない設定です。
 
 ## 検証
 

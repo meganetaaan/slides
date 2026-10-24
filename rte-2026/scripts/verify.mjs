@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 import { createServer } from './serve.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const out=path.join(root,'verification');await mkdir(out,{recursive:true});
+const out=path.join(root,'verification',process.env.PUBLIC_URL?'public':'.');await mkdir(out,{recursive:true});
 for(const name of await readdir(out))if(/^slide-\d{2}\.png$/.test(name))await unlink(path.join(out,name));
 const deck=JSON.parse(await readFile(path.join(root,'source/deck.json'),'utf8'));
 const distDeck=JSON.parse(await readFile(path.join(root,'dist/deck.json'),'utf8'));
@@ -19,13 +19,14 @@ const binaries=[process.env.CHROME_PATH,'C:/Program Files/Google/Chrome/Applicat
 let executablePath;for(const p of binaries){try{await access(p);executablePath=p;break;}catch{}}
 if(!executablePath)throw Error('Set CHROME_PATH to an installed Chromium browser.');
 const server=createServer();await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-const url=`http://127.0.0.1:${server.address().port}/`;
+const url=process.env.PUBLIC_URL||`http://127.0.0.1:${server.address().port}/`;
+const allowedOrigin=new URL(url).origin;
 const browser=await chromium.launch({executablePath,headless:true,args:['--no-proxy-server','--disable-background-networking','--disable-component-update','--disable-sync']});
 const context=await browser.newContext({viewport:{width:1600,height:900},deviceScaleFactor:1,hasTouch:true});
 const external=[],failures=[],errors=[];
 await context.route('**/*',route=>{
   const u=new URL(route.request().url());
-  if(u.hostname!=='127.0.0.1'){external.push(u.origin);return route.abort();}
+  if(u.origin!==allowedOrigin){external.push(u.origin);return route.abort();}
   return route.continue();
 });
 context.on('page',p=>{p.on('pageerror',e=>errors.push(e.message));p.on('response',r=>{if(r.status()>=400)failures.push({path:new URL(r.url()).pathname,status:r.status()});});});
@@ -112,6 +113,6 @@ try{
   await page.reload();await page.waitForFunction(()=>window.Reveal?.isReady());
   assert.ok(await page.locator('.present .slide-art').evaluate(i=>i.complete&&i.naturalWidth===1600));
   assert.deepEqual(external,[],'No external requests are allowed');assert.deepEqual(errors,[]);assert.deepEqual(failures,[]);
-  await writeFile(path.join(out,'report.json'),JSON.stringify({passed:true,revision:deck.revision,physicalSlides:deck.physicalSlides,skippedSlideIds:deck.skippedSlideIds||[],sourceAndDistMatch:true,allNotesAndBoldMatch:true,offlineTest:'All non-loopback HTTP requests blocked at browser routing; new context and local HTTP reload succeeded.',externalRequests:external,httpFailures:failures,pageErrors:errors,keyboardNavigation:true,touchNavigation:true,notesPopup:true,notesBold:true,notesStageCues:true,mobileViewport:{width:390,height:844},slides,animations},null,2));
+  await writeFile(path.join(out,'report.json'),JSON.stringify({passed:true,revision:deck.revision,physicalSlides:deck.physicalSlides,skippedSlideIds:deck.skippedSlideIds||[],sourceAndDistMatch:true,allNotesAndBoldMatch:true,publicUrl:process.env.PUBLIC_URL||null,offlineTest:process.env.PUBLIC_URL?'Public HTTPS page tested with all third-party requests blocked.':'All non-loopback HTTP requests blocked at browser routing; new context and local HTTP reload succeeded.',externalRequests:external,httpFailures:failures,pageErrors:errors,keyboardNavigation:true,touchNavigation:true,notesPopup:true,notesBold:true,notesStageCues:true,mobileViewport:{width:390,height:844},slides,animations},null,2));
   console.log(`PASS: ${deck.physicalSlides} slides, ${animations.length} animated GIFs, speaker notes, mobile layout, external network blocked.`);
 }finally{await context.close();await browser.close();await new Promise(resolve=>server.close(resolve));}
